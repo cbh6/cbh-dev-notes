@@ -1,4 +1,8 @@
-# Adding an existing project to GitHub using the command line
+# GIT 
+
+* [Adding an existing project to GitHub using the command line](#adding-an-existing-project-to-github-using-the-command-line)
+
+## Adding an existing project to GitHub using the command line
 
 [Guide](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 

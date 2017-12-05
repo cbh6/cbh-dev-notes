@@ -1,5 +1,8 @@
 # Terminal usefull commands
 
+* [permissions: chmod](#chmod)
+* [services](#services)
+
 ## chmod [options] mode[,mode] file
 
 Optional options:
@@ -22,7 +25,7 @@ Permissions:
     w: write
     x: execute
 
-### change the file permissions of a whole folder and all its sub folders to read/write by anybody
+#### example: change the file permissions of a whole folder and all its sub folders to read/write by anybody
 
 ```
 sudo chmod -R a+rw /var/www
