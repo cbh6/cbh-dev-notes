@@ -1,4 +1,10 @@
 # cbh-dev-notes
 
+# Tools
+
 * [Ubuntu/Debian terminal](tools/ubuntu-terminal.md)
 * [GIT](tools/git.md)
+
+# Meteor
+
+* [App structure](/meteor/app-structure.md)
