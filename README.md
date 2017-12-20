@@ -8,3 +8,4 @@
 # Meteor
 
 * [App structure](/meteor/app-structure.md)
+* [Publish/Subscribe & Methods](/meteor/pub-sub-methods.md)
