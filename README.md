@@ -8,6 +8,7 @@
 # Javascript
 
 * [How To - Questions about how to do something in JS](/javascript/how-to.md)
+* [JS theorical Questions](/javascript/js-theorical-questions.md)
 
 # Meteor
 
