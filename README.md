@@ -7,7 +7,7 @@
 
 # Javascript
 
-* [How To - Questions about how to do something in JS](how-to.md)
+* [How To - Questions about how to do something in JS](/javascript/how-to.md)
 
 # Meteor
 
@@ -16,6 +16,8 @@
 
 # React
 
+* [Basic questions](react/basic-questions.md)
+
 ## Complementary Components
 
-* [alert-react example](alert-react-example.md)
+* [alert-react example](react/alert-react-example.md)
