@@ -5,6 +5,10 @@
 * [Ubuntu/Debian terminal](tools/ubuntu-terminal.md)
 * [GIT](tools/git.md)
 
+# Javascript
+
+* [How To - Questions about how to do something in JS](how-to.md)
+
 # Meteor
 
 * [App structure](/meteor/app-structure.md)
@@ -12,6 +16,6 @@
 
 # React
 
-## Packages
+## Complementary Components
 
 * [alert-react example](alert-react-example.md)

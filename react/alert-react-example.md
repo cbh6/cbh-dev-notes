@@ -1,4 +1,4 @@
-## react-alert example
+# react-alert example
 
 [react-alert npm](https://www.npmjs.com/package/react-alert)
 
