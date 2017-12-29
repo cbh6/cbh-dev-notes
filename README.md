@@ -18,7 +18,8 @@
 # React
 
 * [Basic questions](react/basic-questions.md)
-
-## Complementary Components
-
 * [alert-react example](react/alert-react-example.md)
+
+# MongoDB
+
+* [Query questions](mongodb/query-questions.md)
