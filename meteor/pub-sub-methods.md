@@ -80,7 +80,7 @@ Meteor.call(
 ![diagram](method-diagram.png "Meteor methods securely saving data")
 
 Meteor methods are executed both on the client and the server side.
-For example, when if we want to store an employee, we should declare a method in the server side:
+For example, if we want to store an employee, we should declare a method in the server side:
 
 ```javascript
 Meteor.methods({
@@ -105,12 +105,12 @@ The client updates instantly and if the server execution fails for some reason t
 
 ## Publish/Subscribe vs Methods
 
-* In pub/sub, as published data gets changed/added the server will automatically send it over to the client subscriptors. That's called reactivity
+* In pub/sub, if published data gets changed/added, the server will automatically send it over to the client subscriptors. That's called reactivity
 
 - Pub/sub is a way to allow access (read & write) to clients and to keep all clients & server updated with latest data.
 
-* Methods is like request/response. You make a request, you get a response. IF data changes you wont know until another call.
-* Methods is mucho more, can be user for HTTP calls to Rest API or for fetching data and making some verification on server-side before fetching.
+* Methods is like request/response. You make a request, you get a response. If data changes you wont know until another call.
+* Methods is much more, can be user for HTTP calls to Rest API or for fetching data and making some verification on server-side before fetching.
 
 ## Loading data with methods
 
