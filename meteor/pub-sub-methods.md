@@ -39,7 +39,7 @@ Meteor.subscribe('customer', Meteor.userId());
 * Used to save user inputs events and data that comes from the client.
 * Like POST request to your server.
 * A method is an API endpoint for your server.
-* You can define a Method on the server and its counterpart on the client. Then call it with some data, crite to db and get the return value in a callback.
+* You can define a Method on the server and its counterpart on the client. Then call it with some data, write to db and get the return value in a callback.
 
 You can declare methods in the server like this
 
@@ -74,6 +74,32 @@ Meteor.call(
   }
 );
 ```
+
+![diagram](method-diagram.png "Meteor methods securely saving data")
+
+Meteor methods are executed both on the client and the server side.
+For example, when if we want to store an employee, we should declare a method in the server side:
+
+```javascript
+Meteor.methods({
+  'employees.insert': function(employee) {
+    check(employee, Object);
+    Employees.insert({ name: employee.name, age: employee.age });
+  }
+});
+```
+
+and then call the method in the client side:
+
+```javascript
+  handleSubmit(event) {
+    event.preventDefault();
+    Meteor.call('employees.insert', employee);
+```
+
+The cool thing there is that Meteor executes the method function in the client side and the server side at the same time.
+
+The client updates instantly and if the server execution fails for some reason the client is notified to revert changes.
 
 ## Publish/Subscribe vs Methods
 
