@@ -18,7 +18,13 @@
 # React
 
 * [Basic questions](react/basic-questions.md)
-* [alert-react example](react/alert-react-example.md)
+
+Useful crafted components
+
+* [react-phone-number-input](https://github.com/catamphetamine/react-phone-number-input)
+* [react-alert](https://github.com/schiehll/react-alert) 
+  * [Example](react/alert-react-example.md)
+* [react-component slider](https://github.com/react-component/slider/)
 
 # MongoDB
 
