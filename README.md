@@ -15,6 +15,11 @@
 * [App structure](/meteor/app-structure.md)
 * [Publish/Subscribe & Methods](/meteor/pub-sub-methods.md)
 
+Useful links
+
+* [MeteorChef](https://themeteorchef.com/tutorials/) 
+* [Meteor-Tuts.com](http://www.meteor-tuts.com/chapters/3/intro.html) Great guide for structuring meteor backend.
+
 # React
 
 * [Basic questions](react/basic-questions.md)
