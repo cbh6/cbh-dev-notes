@@ -36,4 +36,4 @@ Useful crafted components
 # MongoDB
 
 * [Query questions](mongodb/query-questions.md)
-* [Meteor/MongoDB ObjectID type](mongodb/objectId-type.md)
+* [Meteor/MongoDB ObjectID type](mongodb/documentId-type.md)
