@@ -77,6 +77,8 @@ Meteor.call(
 
 ### Flow: Saving data in Meteor
 
+Client flow | Server flow
+
 ![diagram](method-diagram.png "Meteor methods securely saving data")
 
 Meteor methods are executed both on the client and the server side.
