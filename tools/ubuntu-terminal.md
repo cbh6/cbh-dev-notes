@@ -1,10 +1,18 @@
 # Terminal usefull commands
 
-* [compile program from source](#compile)
+* [update VSCode from ubuntu shell](#update-vscode-from-ubuntu-shell)
+* [compile program from source](#compile-a-program-from-source)
 * [permissions: chmod](#chmod)
 * [services](#services)
 
-## Compile a program from a source
+## Update VSCode from Ubuntu Shell
+
+```shell
+wget https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable -O /tmp/code_latest_amd64.deb
+sudo dpkg -i /tmp/code_latest_amd64.deb
+```
+
+## Compile a program from source
 
 1. open a console
 2. use the command cd to navigate to the correct folder. If there is a README file with installation instructions, use that instead.
@@ -18,7 +26,9 @@
 5. `make`
 6. `sudo make install`
 
-## chmod [options] mode[,mode] file
+## Permissions
+
+`chmod [options] mode[,mode] file`
 
 Optional options:
 
