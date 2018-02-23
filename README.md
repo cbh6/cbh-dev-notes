@@ -31,6 +31,10 @@ Useful links
 
 * [Basic questions](react/basic-questions.md)
 
+Useful links
+
+* [Class vs Functional Componentgit status - Stateful vs Stateless Components](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541)
+
 Useful crafted components
 
 * [react-phone-number-input](https://github.com/catamphetamine/react-phone-number-input)
