@@ -7,6 +7,10 @@
 * [Fontello](http://fontello.com/) : create custom icon fonts
   * [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
 
+## Others
+
+* [password policy regexp](/others/password-regexp.md)
+
 ## Javascript
 
 * [How To - Questions about how to do something in JS](/javascript/how-to.md)
