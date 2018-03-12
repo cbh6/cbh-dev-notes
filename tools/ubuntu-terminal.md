@@ -1,9 +1,17 @@
 # Terminal usefull commands
 
+* [check & kill service from port](#check-and-kill-service-from-port)
 * [update VSCode from ubuntu shell](#update-vscode-from-ubuntu-shell)
 * [compile program from source](#compile-a-program-from-source)
 * [permissions: chmod](#chmod)
 * [services](#services)
+
+## Check and kill service from port
+
+```shell
+sudo lsof -i :port
+sudo kill `sudo lsof -t -i :port`
+```
 
 ## Update VSCode from Ubuntu Shell
 
