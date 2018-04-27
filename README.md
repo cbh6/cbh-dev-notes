@@ -20,6 +20,7 @@
 
 * [ExpressJS - bodyParser](/nodejs/bodyParser.md)
 * [Gulp + BrowserSync](/nodejs/gulp-browsersync.md)
+* [NPM update packages](/nodejs/update-npm-packages.md)
 
 ## Meteor
 
