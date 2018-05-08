@@ -1,5 +1,11 @@
 # cbh-dev-notes
 
+## Javascript
+
+* [JS Functional Snippets](/javascript/js-functional-snippets.md)
+* [How To - Questions about how to do something in JS](/javascript/how-to.md)
+* [JS theorical Questions](/javascript/js-theorical-questions.md)
+
 ## Tools
 
 * [Ubuntu/Debian terminal](tools/ubuntu-terminal.md)
@@ -11,10 +17,6 @@
 
 * [password policy regexp](/others/password-regexp.md)
 
-## Javascript
-
-* [How To - Questions about how to do something in JS](/javascript/how-to.md)
-* [JS theorical Questions](/javascript/js-theorical-questions.md)
 
 ## Node JS
 
