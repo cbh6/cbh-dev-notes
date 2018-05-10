@@ -23,9 +23,9 @@ Array.every() tests whether all elements in the array pass the test implemented 
 
 ```js
 const emailArray = ['cri.bh6@gmail.com', 'cristian@digio.es']
-const validEmails = emailArray.every(email => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email));
+const areEmailsValid = emailArray.every(email => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email));
 
-console.log(validEmails);
+console.log(areEmailsValid);
 ```
 
 
