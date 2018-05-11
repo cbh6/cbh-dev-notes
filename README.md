@@ -2,6 +2,7 @@
 
 ## Javascript
 
+* [JS Notes](/javascript/js-notes.md)
 * [JS Functional Snippets](/javascript/js-functional-snippets.md)
 * [How To - Questions about how to do something in JS](/javascript/how-to.md)
 * [JS theorical Questions](/javascript/js-theorical-questions.md)
