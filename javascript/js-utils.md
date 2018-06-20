@@ -18,7 +18,7 @@ const n = 123456789;
 const hexadecimal = n.toString(16);
 ```
 
-## Conver hexadecimal to number
+## Convert hexadecimal to number
 
 For example when you got hexadecimal representation of a timestamp
 ```javascript
