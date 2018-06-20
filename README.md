@@ -2,6 +2,7 @@
 
 ## Javascript
 
+* [JS Utils](/javascript/js-utils.md)
 * [JS Notes](/javascript/js-notes.md)
 * [JS Functional Snippets](/javascript/js-functional-snippets.md)
 * [How To - Questions about how to do something in JS](/javascript/how-to.md)
@@ -44,7 +45,7 @@ Useful links
 
 Useful links
 
-* [Class vs Functional Componentgit status - Stateful vs Stateless Components](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541)
+* [Class vs Functional Component - Stateful vs Stateless Components](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541)
 
 Useful crafted components
 
