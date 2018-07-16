@@ -22,6 +22,7 @@
 
 ## Node JS
 
+* [NodeJS Http requests](/nodejs/http-requests.md)
 * [ExpressJS - bodyParser](/nodejs/bodyParser.md)
 * [Gulp + BrowserSync](/nodejs/gulp-browsersync.md)
 * [NPM update packages](/nodejs/update-npm-packages.md)
