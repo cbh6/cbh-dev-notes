@@ -1,5 +1,9 @@
 # cbh-dev-notes
 
+## ES6
+
+* [Run async functions in parallel](/javascript/async-functions-parallel.md)
+
 ## Javascript
 
 * [JS Utils](/javascript/js-utils.md)
