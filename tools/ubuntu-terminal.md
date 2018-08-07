@@ -17,6 +17,15 @@ sudo apt-get install pavucontrol
 sudo pavucontrol -D
 ```
 
+### ZSH
+Install zsh instructions
+
+https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
+
+Oh-My-Zsh is a framework for Zsh, the Z shell.
+
+https://github.com/robbyrussell/oh-my-zsh
+
 ## Check and kill service from port
 
 ```shell
