@@ -6,6 +6,26 @@
 * [permissions: chmod](#chmod)
 * [services](#services)
 
+## Utils
+
+```shell
+## Install gnome-control-center
+sudo apt-get install gnome-control-center
+## Audio control panel
+sudo apt-get install pavucontrol
+## Fix
+sudo pavucontrol -D
+```
+
+### ZSH
+Install zsh instructions
+
+https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
+
+Oh-My-Zsh is a framework for Zsh, the Z shell.
+
+https://github.com/robbyrussell/oh-my-zsh
+
 ## Check and kill service from port
 
 ```shell

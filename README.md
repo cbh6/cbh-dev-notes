@@ -1,12 +1,14 @@
 # cbh-dev-notes
 
-## Javascript
+## Javascript - ES6
 
 - [JS Utils](/javascript/js-utils.md)
 - [JS Notes](/javascript/js-notes.md)
 - [JS Functional Snippets](/javascript/js-functional-snippets.md)
 - [How To - Questions about how to do something in JS](/javascript/how-to.md)
 - [JS theorical Questions](/javascript/js-theorical-questions.md)
+- [Run async functions in parallel](/javascript/async-functions-parallel.md)
+- [Promisify timeout](/javascript/promisify-timeout.md)
 
 ## Web performance
 
@@ -15,6 +17,13 @@
 ## Tools
 
 - [Ubuntu/Debian terminal](tools/ubuntu-terminal.md)
+- [GIT](tools/git.md)
+- [Fontello](http://fontello.com/) : create custom icon fonts
+  - [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
+
+## Tools
+
+- [Ubuntu terminal](tools/ubuntu-terminal.md)
 - [GIT](tools/git.md)
 - [Fontello](http://fontello.com/) : create custom icon fonts
   - [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
