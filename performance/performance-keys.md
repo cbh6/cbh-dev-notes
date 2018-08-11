@@ -60,10 +60,9 @@ the dom to create the render tree.
 
 **keys**:
 
-load only what necessary: maybe you don't need to load all bootstrap files if you only need grid
-
+- load only what necessary: maybe you don't need to load all bootstrap files if you only need grid
 - use media attributes to load css depending on the screen size
-- above the fold
+- above the fold:
 
   Load first the css files that are important to render what user see when the web page loads
 
