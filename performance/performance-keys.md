@@ -2,7 +2,7 @@
 
 ## Keys to improve performance of a website
 
-- Improve what happers in the client side. The frontend needs time to render
+- Improve what happens in the client side. The frontend needs time to render
 - Improve the transfer files. Latency
 - Improve the backend process (load data from db, caching ...)
 
@@ -45,20 +45,20 @@ Minimize:
 ---
 
 1 - HTML file is received.
-The borwser try to load css and js files.
+The browser tries to load css and js files.
 
 Place:
 
 - CSS Files in head tag
 - JS scripts at the bottom
 
-placing js in head tag before style sheets may block rendering because browser
+Placing js in head tag before style sheets may block rendering because browser
 will try to download and run JS code before rendering the DOM with the CSS Object Model
 
 2 - CSS is render blocking because we're waiting for the css om to complete and combine it with
 the dom to create the render tree.
 
-keys:
+**keys**:
 
 load only what necessary: maybe you don't need to load all bootstrap files if you only need grid
 
