@@ -44,7 +44,7 @@ Minimize:
 
 ---
 
-1 - HTML file is received.
+### 1 - HTML file is received.
 The browser tries to load css and js files.
 
 Place:
@@ -55,7 +55,7 @@ Place:
 Placing js in head tag before style sheets may block rendering because browser
 will try to download and run JS code before rendering the DOM with the CSS Object Model
 
-2 - CSS is render blocking because we're waiting for the css om to complete and combine it with
+### 2 - CSS is render blocking because we're waiting for the css om to complete and combine it with
 the dom to create the render tree.
 
 **keys**:
@@ -108,3 +108,49 @@ a.important {
 
 - use internal css styles: allows us to not have to request CSS file
 - inline css
+
+### 3 - Load javascript 
+
+Once a script tag in the HTML schema is discovered, the
+DOM construction is paused and the script is requested from the server.
+
+Once the script is loaded, it cant be executed until CSS OM is constructed.
+Javascript can access and modify the DOM and the CSS OM
+
+**Tips:**
+
+- Load Scripts asynchronously
+- Defer Loading of scripts
+- Minimize DOM manipulation
+- Avoid long running Javascript
+
+**Load scripts asynchronously**
+
+Javascript blocks HTML parsing process.
+You can use async and defer when including javascript in `<script>` tags
+
+`<script>`
+HTML parsing will wait until the script is downloaded and executed
+
+`<script async>`
+The script will be downloaded whithout blocking HTML parse. But as soon as gets downloaded, it will be executed
+and then, it will block HTML parsing. Thats because, if the script is downloaded and the HTML is not completely parsed,
+we could get some errors if the script tries to manipulate the DOM.
+
+Add them to anything that doesn't affect the dom or the css document object model.
+Async should be used for pretty much all external scripts that require no knowledge of our code and are not
+really essential to our user experience.
+Ex: Google analytics, tracking scripts ...
+
+`<script defer>`
+It will wait to execute until after all has been parsed an we will execute in order of appearance
+
+So:
+
+If the core functionality requires javascript, async is best
+
+- `<script>` Critical scripts. App scripts
+- `<script async>` Third party scripts that don't affect the dom
+- `<script defer>` Third party scripts that aren't that important. Aren't above the fold.
+
+![alt text](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/images/image_13.png "Script load diagram")
