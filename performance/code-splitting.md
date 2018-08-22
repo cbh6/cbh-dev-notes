@@ -4,7 +4,7 @@
 
 There is more info about this concept in [React documentation](https://reactjs.org/docs/code-splitting.html)
 
-The javascript bundle is downloaded when the user gets into the page. We can remove some javascript of that bundle by doing code splitting. This will allow us to ship javascript files when the user access some route or a component needs to appear.
+The javascript bundle is downloaded when the user gets into the page. We can remove some javascript of that bundle by doing code splitting. This will allow us to ship the 'removed from bundle' javascript files when the user access some route or a component needs to appear.
 
 
 There are two types of code splitting:
