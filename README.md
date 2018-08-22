@@ -13,6 +13,7 @@
 ## Web performance
 
 - [Basic keys for web performance](/performance/performance-keys.md)
+- [Code splitting](/performance/code-splitting.md)
 
 ## Tools
 
