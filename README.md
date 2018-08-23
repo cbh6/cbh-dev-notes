@@ -14,6 +14,7 @@
 
 - [Basic keys for web performance](/performance/performance-keys.md)
 - [Code splitting](/performance/code-splitting.md)
+- [React performance optimization: Notes](/performance/react-performance-optimizations.md)
 
 ## Tools
 
