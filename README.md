@@ -18,18 +18,12 @@
 
 ## Tools
 
-<<<<<<< HEAD
 * [Browser Useful Extensions](tools/browser-useful-extensions.md)
 * [Ubuntu terminal](tools/ubuntu-terminal.md)
 * [GIT](tools/git.md)
 * [Fontello](http://fontello.com/) : create custom icon fonts
   * [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
-=======
-- [Ubuntu/Debian terminal](tools/ubuntu-terminal.md)
-- [GIT](tools/git.md)
-- [Fontello](http://fontello.com/) : create custom icon fonts
-  - [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
->>>>>>> b81cb612ffc4789c3fda9c39ec6e52eeedc2c5d1
+
 
 ## Tools
 
