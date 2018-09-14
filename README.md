@@ -12,6 +12,7 @@
 
 ## Tools
 
+* [Browser Useful Extensions](tools/browser-useful-extensions.md)
 * [Ubuntu terminal](tools/ubuntu-terminal.md)
 * [GIT](tools/git.md)
 * [Fontello](http://fontello.com/) : create custom icon fonts
@@ -22,7 +23,7 @@
 * [password policy regexp](/others/password-regexp.md)
 
 
-## Node JS
+## Node JS and more
 
 * [NodeJS Http requests](/nodejs/http-requests.md)
 * [ExpressJS - bodyParser](/nodejs/bodyParser.md)
