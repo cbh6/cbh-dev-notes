@@ -46,7 +46,8 @@ Useful links
 ## React
 
 * [Basic questions](react/basic-questions.md)
-* [React Router](eact/react-router.md)
+* [React Router](react/react-router.md)
+* [React Smooth Scrolling to Element](react/scrolling.md);
 
 Useful links
 
