@@ -1,6 +1,4 @@
-# GIT 
-
-* [Adding an existing project to GitHub using the command line](#adding-an-existing-project-to-github-using-the-command-line)
+# GIT
 
 ## Adding an existing project to GitHub using the command line
 
@@ -50,4 +48,20 @@ git push origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
+## Configure multiple remote origins
 
+Change GIT origin and upload files
+
+```shell
+➜ git remote set-url origin git@github.com/myrepo.git
+➜ git remote -v
+➜ git push -u origin --all
+➜ git push -u origin --tags
+```
+
+Add new origins
+
+```shell
+➜ git remote add origin-gitlab git@gitlab.hey.es:web/myrepo
+➜ git push -u origin-gitlab --all
+```
