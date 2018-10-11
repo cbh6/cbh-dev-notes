@@ -18,11 +18,11 @@
 
 ## Tools
 
-* [Browser Useful Extensions](tools/browser-useful-extensions.md)
-* [Ubuntu terminal](tools/ubuntu-terminal.md)
-* [GIT](tools/git.md)
-* [Fontello](http://fontello.com/) : create custom icon fonts
-  * [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
+- [Browser Useful Extensions](tools/browser-useful-extensions.md)
+- [Ubuntu terminal](tools/ubuntu-terminal.md)
+- [GIT](tools/git.md)
+- [Fontello](http://fontello.com/) : create custom icon fonts
+  - [Semantic-Ui custom icons](https://github.com/Semantic-Org/Semantic-UI-React/issues/931#issuecomment-263643210)
 
 ## Others
 
@@ -42,6 +42,7 @@
 - [Async methods with wrapAsync](/meteor/async.md)
 - [Connect to local meteor mongodb](/meteor/connect-local-mongodb.md)
 - [Reactive:false subscriptions](/meteor/reactive-false-subscriptions.md)
+- [Meteor & Semantic UI - Usage and icon load problems](/meteor/meteor-semantic-icons.md)
 
 Useful links
 
@@ -50,9 +51,9 @@ Useful links
 
 ## React
 
-* [Basic questions](react/basic-questions.md)
-* [React Router](react/react-router.md)
-* [React Smooth Scrolling to Element](react/scrolling.md);
+- [Basic questions](react/basic-questions.md)
+- [React Router](react/react-router.md)
+- [React Smooth Scrolling to Element](react/scrolling.md);
 
 Useful links
 
