@@ -27,6 +27,7 @@
 ## Others
 
 - [password policy regexp](/others/password-regexp.md)
+- [adding script tags dinamycally](/javascript/script-tags-dinamically.md)
 
 ## Node JS and more
 
