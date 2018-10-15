@@ -33,3 +33,9 @@ Remove the package after checking the bundle
 `meteor --version`
 `meteor npm -version`
 `meteor node -v`
+
+## Add meteor settings
+
+[Info](https://docs.meteor.com/api/core.html#Meteor-settings)
+
+Settings file. `Meteor.settings.yourConfigProperty` to get the data.
