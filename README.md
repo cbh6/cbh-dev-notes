@@ -44,6 +44,7 @@
 - [Connect to local meteor mongodb](/meteor/connect-local-mongodb.md)
 - [Reactive:false subscriptions](/meteor/reactive-false-subscriptions.md)
 - [Meteor & Semantic UI - Usage and icon load problems](/meteor/meteor-semantic-icons.md)
+- [Meteor config](/meteor/meteor-config.md)
 
 Useful links
 
