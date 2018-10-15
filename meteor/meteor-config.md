@@ -39,3 +39,4 @@ Remove the package after checking the bundle
 [Info](https://docs.meteor.com/api/core.html#Meteor-settings)
 
 Settings file. `Meteor.settings.yourConfigProperty` to get the data.
+[A great tutorial about this from Meteor Chef](https://blog.meteor.com/the-meteor-chef-making-use-of-settings-json-3ed5be2d0bad)
