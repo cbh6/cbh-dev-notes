@@ -4,7 +4,7 @@
 
 - [JS Utils](/javascript/js-utils.md)
 - [JS Notes](/javascript/js-notes.md)
-- [JS Functional Snippets](/javascript/js-functional-snippets.md)
+- [JS Snippets](/javascript/js-snippets.md)
 - [How To - Questions about how to do something in JS](/javascript/how-to.md)
 - [JS theorical Questions](/javascript/js-theorical-questions.md)
 - [Run async functions in parallel](/javascript/async-functions-parallel.md)
