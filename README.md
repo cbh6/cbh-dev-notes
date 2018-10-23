@@ -45,6 +45,7 @@
 - [Reactive:false subscriptions](/meteor/reactive-false-subscriptions.md)
 - [Meteor & Semantic UI - Usage and icon load problems](/meteor/meteor-semantic-icons.md)
 - [Meteor config](/meteor/meteor-config.md)
+- [Save base64 image to disk](/meteor/save-b64-image.md)
 
 Useful links
 
