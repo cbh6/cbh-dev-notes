@@ -29,7 +29,7 @@
 - [password policy regexp](/others/password-regexp.md)
 - [adding script tags dinamically](/javascript/script-tags-dynamically.md)
 
-## Node JS and more
+## Node & more
 
 - [NodeJS Http requests](/nodejs/http-requests.md)
 - [ExpressJS - bodyParser](/nodejs/bodyParser.md)
@@ -77,3 +77,9 @@ Useful crafted components
 ## PHP/Laravel
 
 - [Useful Commands](php-laravel/useful-commands.md)
+
+## Docker
+- [Notes](docker/docker-notes.md)
+
+## Frontend topics
+- [SPA and SSR](frontend/spa-and-ssr.md)
