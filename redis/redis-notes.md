@@ -63,7 +63,19 @@
 
 - **SETS AND SORTED SETS**
 
-
+  - Unordered/Ordered collection of strings
+  - Sets are as lists but they cant contain repeated values
+  - No duplicates
+  - **Unordered sets**
+    - `SADD ourset 1 2 3 4 5`
+    - `SMEMBERS ourset`
+    - `SISMEMBER key member`
+    - `SISMEMBER ourset 5` // 1 (true)
+  - **Sorted sets** 
+    - `ZADD team 50 "Wizards"`
+    - `ZADD team 40 "Cavaliers"`
+    - `ZRANGE team 0 1` // Cavaliers, Wizards
+    - `ZRANK team "Wizards"` // 1
 
 ## Commands
 
