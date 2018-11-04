@@ -83,3 +83,6 @@ Useful crafted components
 
 ## Frontend topics
 - [SPA and SSR](frontend/spa-and-ssr.md)
+
+## Redis
+- [Notes](redis/notes.md)
