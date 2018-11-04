@@ -85,4 +85,4 @@ Useful crafted components
 - [SPA and SSR](frontend/spa-and-ssr.md)
 
 ## Redis
-- [Notes](redis/notes.md)
+- [Notes](redis/redis-notes.md)
