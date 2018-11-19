@@ -84,5 +84,8 @@ Useful crafted components
 ## Frontend topics
 - [SPA and SSR](frontend/spa-and-ssr.md)
 
+## Backend topics
+- [Sessions + JWT](backend/sessions-jwt.md)
+
 ## Redis
 - [Notes](redis/redis-notes.md)
