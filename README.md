@@ -2,6 +2,7 @@
 
 ## Javascript - ES6
 
+- [JS ES6](/javascript/jsES6.md)
 - [JS Utils](/javascript/js-utils.md)
 - [JS Notes](/javascript/js-notes.md)
 - [JS Snippets](/javascript/js-snippets.md)
