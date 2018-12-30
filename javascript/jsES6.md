@@ -37,3 +37,40 @@ console.log(first, second); // 'bye' 'hey'
 ``` 
 
 - arguments is a javascript keyword that gives us an array of received arguments. It doesn't work for arrow functions.
+
+# Template strings
+
+- Nesting
+
+```javascript
+const dogs = [
+  { name: 'Snickers', age: 2 },
+  { name: 'Hugo', age: 8 },
+  { name: 'Sunny', age: 1 },
+];
+
+const markup = `
+  <ul>
+    ${dogs.map(dog => `<li>${dog.name}</li>`)}
+  </ul>
+`;
+
+document.body.innerHTML = markup;
+```
+
+- Functions that return template strings can also be called inside template strings. This is useful to structure & modularize.
+- With if statement inside the template string
+
+```javascript
+const dogs = [
+  { name: 'Snickers', age: 2, },
+];
+
+const markup = `
+  <ul>
+    ${dogs.map(dog => `<li>${dog.name} ${dog.age ? `(Age: ${dog.age})` : ''}</li>`)}
+  </ul>
+`;
+
+document.body.innerHTML = markup;
+```
