@@ -83,3 +83,10 @@ decide how will be the template string result.
 [examples](https://github.com/wesbos/es6.io/tree/master/03%20-%20Template%20Strings)
 
 - sanitize strings [DOMPurify](https://github.com/cure53/DOMPurify)
+
+# New String methods
+
+- startsWith(compareString, afterIndex)
+- endsWith(compareString, characterNumbersFromStart)
+- includes(string)
+- repeat(string)  
