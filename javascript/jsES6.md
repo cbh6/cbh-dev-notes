@@ -74,3 +74,12 @@ const markup = `
 
 document.body.innerHTML = markup;
 ```
+
+- debugger: putting `debugger` in any function will automatically 
+stops browser execution at this point.
+- tagged template literals: you can define a function which will
+decide how will be the template string result.
+
+[examples](https://github.com/wesbos/es6.io/tree/master/03%20-%20Template%20Strings)
+
+- sanitize strings [DOMPurify](https://github.com/cure53/DOMPurify)
