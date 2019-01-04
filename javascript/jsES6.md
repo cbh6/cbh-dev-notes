@@ -89,4 +89,63 @@ decide how will be the template string result.
 - startsWith(compareString, afterIndex)
 - endsWith(compareString, characterNumbersFromStart)
 - includes(string)
-- repeat(string)  
+- repeat(string) 
+
+# Destructuring
+
+[Course examples](https://github.com/wesbos/es6.io/tree/master/05%20-%20Destructuring)
+
+- Destructuring objects
+
+```javascript
+const me = { name: 'Cristian', age: 25 };
+const { name, age } = me;
+```
+
+- Rename destructured variables
+
+```javascript
+const me =  {
+  name: 'cristian',
+  age: 25
+}
+
+const { name:n, age:a } = me;
+```
+
+- Default values when destructuring
+
+```javascript
+const settings = { height: 100, color: 'black' };
+const { height = 50, width = 50, color: 'white' };
+```
+
+- Default values + renaming
+
+```javascript
+const settings = { height: 100, color: 'black' };
+const { height: h = 50, width: w = 50, color: 'white' };
+```
+
+- Destructuring arrays
+
+```javascript
+const me = ['cristian', 25, '@cbh6'];
+const [ name, age, github ] = me;
+
+const data = "hamburguer,15,3";
+const [ foodItem, prize, number ] = data.split(",");
+
+// using rest operator
+const team = ['wes', 'harry', 'sarah', 'keegan'];
+const [captain, assistant, ...players] = team;
+```
+
+- Swap variables using array destructuring
+
+```javascript
+let inRing = 'Hulk Hogan';
+let onSide = 'The Rock';
+
+[inRing, onSide]= [onSide, inRing];
+```
