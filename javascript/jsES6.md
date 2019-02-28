@@ -149,3 +149,38 @@ let onSide = 'The Rock';
 
 [inRing, onSide]= [onSide, inRing];
 ```
+
+# Iterables & Looping
+
+[Examples](<https://github.com/wesbos/es6.io/tree/master/06%20-%20Iterables%20%26%20Looping>)
+
+Iterable: anything that can be looped over: Array, String, Map, Set ...
+
+- **for of**: used to loop over any type of data that isn't iterable
+
+- **forEach**: downside: cannot abort or skip one of the ones. break is not allowed inside a foreach. same with continue.
+
+- **for in**: loops over the index. It iterates over absolutely everything in the array, including things that have been added to the prototype.
+
+- **for of**: loop over any type except objects. Allows break and continue. Does not iterate over things added to the prototype, and iterates over values, not index. Gives us the best from all other kind of looping.
+
+- `array.entries()`, gives us the ArrayIterator to iterate manually
+- Get index from for of: array.entries()
+
+```
+for (const [i, cut] of cuts.entries()) {
+  console.log(i, cut);
+}
+```
+
+**You can use for of in most of the cases except for objects:**
+
+- Iterate over function arguments
+
+- Iterate over a string
+
+- DOM collections
+
+- Objects: Using Object.keys(myobj) and iterating them
+
+- For Objects is more recommended to use for in. For ES2017 there is a proposal for Object.entries().
