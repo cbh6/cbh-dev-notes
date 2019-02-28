@@ -47,6 +47,9 @@
 - [Meteor & Semantic UI - Usage and icon load problems](/meteor/meteor-semantic-icons.md)
 - [Meteor config](/meteor/meteor-config.md)
 - [Save base64 image to disk](/meteor/save-b64-image.md)
+- [**Meteor Live Data notes**](/meteor/meteor-livedata-notes.md)
+- [i18n-meteor](/meteor/i18n.md)
+- [meteor semanticui](/meteor/meteor-semantic.md)
 
 Useful links
 
@@ -74,6 +77,16 @@ Useful crafted components
 
 - [Query questions](mongodb/query-questions.md)
 - [Meteor/MongoDB ObjectID type](mongodb/documentId-type.md)
+
+## MySQL
+
+- [Notes](mysql/mysql-notes.md)
+
+## JAVA
+
+- [Notes](java/java-notes.md)
+- [Jhipster](java/jhipster.md)
+- [Oracle-Java](java/oracle-db-java.md)
 
 ## PHP/Laravel
 
