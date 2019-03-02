@@ -184,3 +184,94 @@ for (const [i, cut] of cuts.entries()) {
 - Objects: Using Object.keys(myobj) and iterating them
 
 - For Objects is more recommended to use for in. For ES2017 there is a proposal for Object.entries().
+
+
+
+
+
+## Array .from() & .of()
+
+.from()
+
+- Transform whatever arrayish and transforms it in a true array.
+- Not in the prototype. So you cant 
+
+```
+const ages = [12,23,54];
+ages.from()...
+```
+
+in the Array itself
+
+```
+Array.from(ages);
+```
+
+Useful with DOM elements (NodeList)
+
+```
+const people = document.querySelectoAll('p');
+const peopleArray = Array.from(people);
+peopleArray.map(....
+```
+
+You can pass a function callback to Array.from()
+
+```
+const peopleArray = Array.from(people, person => return person.textContent);
+```
+
+- Array.from() is usefull to transform function arguments to an array
+
+```
+function sumAll() {
+  const nums = Array.from(arguments);
+  return nums.reduce((prev, next) => prev + next, 0);
+}
+
+sumAll(33,44,55,66);
+```
+
+- Array.of(), returns an array with every element passed
+
+```
+const nums = Array.of(1,2,3,4);
+```
+
+## Array.find() & .findIndex()
+
+- For finding elements in object arrays by property `const post = posts.find(post => post.code === 'abcd1234')`
+
+This will return the first one that matches
+
+- For finding multiple elements -> Array.filter()
+
+- For finding the index of an specific element: `const postIndex = posts.findIndex(post => post.code === 'abcd1234')`
+
+# Spread operator
+
+- Any iterable element can be spreaded (Array, String, arguments object, NodeList...)
+
+```
+console.log([...'cristian']);
+// ['c','r','i','s','t','i','a','n']
+```
+
+- Concat arrays 
+
+```
+const a = [1,2,3];
+const b = [5,6,7];
+
+const z = [...a, 4, ...b];
+console.log(z); // [1,2,3,4,5,6,7]
+```
+
+- Copy arrays
+
+```
+const a = [1,2,3]
+const copy = [...a];
+```
+
+if copy is modified, a wont be overwritten.
