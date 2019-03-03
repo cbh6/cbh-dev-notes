@@ -275,3 +275,42 @@ const copy = [...a];
 ```
 
 if copy is modified, a wont be overwritten.
+
+- Array.from() alternative. Spread operators can be used to transform a NodeList (for example, or any Iterable type) to a true Array. Array.from() is more readable tho.
+
+- Delete array elements
+
+```
+const elements = ['c','r','i', 's'];
+const indexToDelete = 1;
+
+const newArray =  [...elements.slice(0, indexToDelete), ...elements(indexToDelete + 1)];
+```
+
+- Spread into a function: Push array elements inside another array
+
+```
+const elements = [1,2,3,4];
+const new = [6,7];
+
+elements.push(...new);
+```
+
+- **Rest param in functions**
+
+```
+function convertCurrency(rate, ...amounts) {
+  console.log(rate, amounts);
+}
+
+convertCurrency(1.54, 23, 34, 1); // 1.54 [23, 34, 1]
+```
+
+- Rest param
+
+```
+const runner = ['Wes', 'cbhId123', 4, 10, 15, 3];
+const [name, id, ...runs] = runner;
+
+console.log(name, id, runs); // 'Wes' 'cbhId123' [4, 10, 15, 3]
+```
