@@ -314,3 +314,71 @@ const [name, id, ...runs] = runner;
 
 console.log(name, id, runs); // 'Wes' 'cbhId123' [4, 10, 15, 3]
 ```
+
+# Object literals
+
+ ```
+ const key = 'color';
+ const value = 'yellow';
+ const tShirt = {
+   [key]: vlaue
+ };
+
+ console.log(tShirt); // { color: 'yellow'}
+ ```
+
+- You can use javascript to compute key names (in this case, a template string. But also function calls or whatever js is allowed)
+
+ ```
+ const tShirt = {
+   [`${key}Opposite`]: invertColor(value)
+ }
+ ```
+
+- Using array as key and value with Array.shift()
+
+```javascript
+const keys = ['size', 'color', 'weight'];
+const values = ['medium', 'red', 100];
+
+const shirt = {
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift(),
+}
+
+console.log(shirt); // {color: 'red', size: 'medium', weight: 100}
+```
+
+# Promises
+
+- Used for fetching json apis, ajax calls.
+- Something that will happen between now and the end of time
+- Something that will happen in the future but probably not inmediatelly
+- fetch api returns a promise. 
+- We can use then() to execute code as soon as the promise successfully comes back
+- We can use catch() to catch any errors that happens.
+  
+```
+const postsPromise = fetch('http://myapi.com/posts);
+
+postsPromise
+  .then(data => data.json())
+  .then(data => { console.log(data) })
+  .catch((err) => {
+    console.error(err);
+  })
+```
+
+- If you dont catch your promise errors and an error occurs, it will throw `Uncaught (in promise)` error.
+- Creating your own Promises
+
+```
+const p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Hey!);
+  }, 1000);
+});
+
+p.then(data => console.log(data)); // After 1 second, 'Hey!';
+```
