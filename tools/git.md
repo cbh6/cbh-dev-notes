@@ -2,17 +2,12 @@
 
 ## Commands
 
-git reset HEAD~1 --hard
-
-> GIT FETCH antes de hacer el checkout para sincronizar los cambios
-
-> git remote prune and git fetch --prune do the same thing: delete the refs to branches that don't exist on the remote
-
-> Add files and edit message to previous commit. `-a` adds all unstaged files
-`git commit -a --amend -m "ESCOLWEB - Modify hueco central field text color and fix hueco edit"`
-
-> `git cherry pick` -> Brings an specific commit to the branch
-> `git merge --abort` -> Abort merge
+`git reset HEAD~1 --hard` -> resets HEAD pointer
+`GIT FETCH` -> before doing checkout to sync changes
+`git remote prune` and `git fetch --prune` do the same thing: delete the refs to branches that don't exist on the remote
+`git commit -a --amend -m "New commit message"` -> Add files and edit message to previous commit. `-a` adds all unstaged files
+`git cherry pick` -> Brings an specific commit to the branch
+`git merge --abort` -> Abort merge
 
 ## Adding an existing project to GitHub using the command line
 
