@@ -359,7 +359,7 @@ console.log(shirt); // {color: 'red', size: 'medium', weight: 100}
 - We can use then() to execute code as soon as the promise successfully comes back
 - We can use catch() to catch any errors that happens.
   
-```
+```javascript
 const postsPromise = fetch('http://myapi.com/posts);
 
 postsPromise
@@ -373,7 +373,7 @@ postsPromise
 - If you dont catch your promise errors and an error occurs, it will throw `Uncaught (in promise)` error.
 - Creating your own Promises
 
-```
+```javascript
 const p = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('Hey!);
@@ -382,3 +382,24 @@ const p = new Promise((resolve, reject) => {
 
 p.then(data => console.log(data)); // After 1 second, 'Hey!';
 ```
+
+# Javascript modules
+
+- import is not supported by browsers yet. That's why we use babel and webpack to transpile and bundle all our packages in one bundle file from ES6 to ES5.
+- webpack.config.js
+
+**Bundlers:**
+
+- Rollup
+- SystemJS
+- Webpack
+- Browserify
+
+**SystemJS**
+
+- SystemJS can be ran in the browser. It runs on top of npm and we don't need to npm install dependencies: jspm.
+- All you need is to configure SystemJS in your HTML and import whatever js local module/npm dependency.
+- This is usefull for quick projects where we want to avoid all the necessary configuration webpack and others involve.
+- A great way to know how modules work in Javascript. 
+- Not good for production purposes.
+- browser-sync for setting up a little server
