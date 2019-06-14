@@ -383,7 +383,7 @@ const p = new Promise((resolve, reject) => {
 p.then(data => console.log(data)); // After 1 second, 'Hey!';
 ```
 
-# Javascript modules
+# Javascript modules and more
 
 - import is not supported by browsers yet. That's why we use babel and webpack to transpile and bundle all our packages in one bundle file from ES6 to ES5.
 - webpack.config.js
@@ -403,3 +403,23 @@ p.then(data => console.log(data)); // After 1 second, 'Hey!';
 - A great way to know how modules work in Javascript. 
 - Not good for production purposes.
 - browser-sync for setting up a little server
+
+
+**Babel**
+
+- You only need webpack/browserify/systemjs... when using modules. If not, we can use babel. A simpler setup.
+- babel plugins
+- babel presets: a collection of plugins
+- babel-preset-env:
+
+> @babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!
+
+- babel configs: .babelrc or in package.json
+- babel-preset-react
+
+
+**Polyfills**
+
+- polyfill.io -> used with `<script>` tag. Detects your browser via user-agent and adds the needed polyfills
+- MDN polyfills
+- babel polyfills -> `npm install --save-dev babel-polyfill` and `import "babel-polyfill"` when using modules
