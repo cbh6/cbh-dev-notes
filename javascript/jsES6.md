@@ -423,3 +423,48 @@ p.then(data => console.log(data)); // After 1 second, 'Hey!';
 - polyfill.io -> used with `<script>` tag. Detects your browser via user-agent and adds the needed polyfills
 - MDN polyfills
 - babel polyfills -> `npm install --save-dev babel-polyfill` and `import "babel-polyfill"` when using modules
+
+# Classes
+
+- The only necessary method to create a class is the constructor
+- static methods. Only callable from the class, not the instances.
+- get & sets
+
+```javascript
+class Dog {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  static info() {
+    console.log('Dogs are better than cats');
+  }
+
+  get description() {
+    return `${this.name} has ${this.age} years old`;
+  }
+  set nick(value) {
+    this.nick = value.trim();
+  }
+  get nick() {
+    return this.nick;
+  }
+}
+```
+- class inheritance
+- extends
+- super() -> call the constructor 'thing' we are extending
+- In the constructor of the extended class, super() is needed in order to access to this to assign extended properties.
+
+```javascript
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+}
+```
+
+- We can extend native things like **Array**
+- [example](https://github.com/wesbos/es6.io/blob/master/15%20-%20Classes/extending-arrays.html)
