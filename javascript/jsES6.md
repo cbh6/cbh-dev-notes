@@ -468,3 +468,34 @@ class Dog extends Animal {
 
 - We can extend native things like **Array**
 - [example](https://github.com/wesbos/es6.io/blob/master/15%20-%20Classes/extending-arrays.html)
+
+# Generators
+
+- A generator is a function that can stop midway and then continue from where it stopped. In short, a generator appears to be a function but it behaves like an iterator. [more info](https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5)
+- *
+- `yield` -> return for now. Return something until the function is called again
+- generators are called with next
+- async/await is based on generators
+
+```javascript
+function* listPeople() {
+  yield 'cbh6';
+  yield 'crs1';
+}
+```
+
+- to call the generator we need to store the function in a variable
+
+```javascript
+const people = listPeople();
+
+people.next(); // returns an object {value: "cbh6", done: false}
+```
+
+- generators are functions that offer multiple returns
+- generator functions keep their scoped variables until the generator is done
+- [more examples](https://github.com/wesbos/es6.io/blob/master/16%20-%20Generators/generators.html)
+- whatever you pass in the generator next() call can be stored in a variable. `const result = yield whateverFunc()`. When the yield result comes back, it gets stored.
+- handy for syncish api calls
+- [example using api calls](https://github.com/wesbos/es6.io/blob/master/16%20-%20Generators/generators-syncish-ajax.html)
+- we can use `for of` to loop over the generator. No `next()` calls are needed 
