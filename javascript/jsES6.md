@@ -552,3 +552,32 @@ const phones = {
 console.log("work" in phones); // true
 console.log("personal" in phones); // false
 ```
+
+# Sets
+
+- Like an unique array.
+- You can add the same item once
+- A nice API to manage the items inside of it
+- Is not index based
+- Is a list of items which we can add to, remove from and loop over
+
+**Methods**
+
+- new Set() . We can pass an array to initialize
+- set.size()
+- set.entries()
+- set.keys()
+- set.clear()
+- set.add()
+- set.has()
+
+**Looping over**
+
+- We can loop over the set using for of
+```javascript
+for(const person of peopleSet) {
+  console.log(person);
+}
+```
+- Or we can manually loop over using next()
+- `.entries()` and `.keys()` gives us a SetIterator -> We can use `.next()` to iterate. Same as generators.
