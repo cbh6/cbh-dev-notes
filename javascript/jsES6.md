@@ -570,7 +570,8 @@ console.log("personal" in phones); // false
 - set.clear()
 - set.add()
 - set.has()
-
+- set.values()
+- 
 **Looping over**
 
 - We can loop over the set using for of
@@ -580,4 +581,7 @@ for(const person of peopleSet) {
 }
 ```
 - Or we can manually loop over using next()
-- `.entries()` and `.keys()` gives us a SetIterator -> We can use `.next()` to iterate. Same as generators.
+- `.values()` and `.keys()` gives us a SetIterator -> We can use `.next()` to iterate. Same as generators.
+
+
+- If we use a variable to store `.values()` and `.next()` to iterate over them. We can still add items to the original set and the *values* variable is going to have them when calling next.
