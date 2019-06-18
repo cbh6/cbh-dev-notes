@@ -499,3 +499,47 @@ people.next(); // returns an object {value: "cbh6", done: false}
 - handy for syncish api calls
 - [example using api calls](https://github.com/wesbos/es6.io/blob/master/16%20-%20Generators/generators-syncish-ajax.html)
 - we can use `for of` to loop over the generator. No `next()` calls are needed 
+
+# Proxies
+
+- Proxies allow you to override the default behaviour from many of an object's default operations 
+- In objects you can get/set things, delete properties, etc.
+- There's a bunch of methods that come along with objects
+- What if you want to override some of these methods/properties?
+- -> Proxies: **override the default behaviour of an operation on an object.**
+
+- [MDN docs](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Proxy)
+- `new Proxy(object, handler)`
+- The first param is the object target, the second is where you specify all the operations you want to override
+- These operations you can override are called *traps*
+  
+- Basic example
+```javascript
+  const person = { name: 'Wes', age: 100 };
+  const personProxy = new Proxy(person, {
+    get(target, name) {
+      return target[name].toUpperCase();
+    },
+    set(target, name, value) {
+      if(typeof value === 'string') {
+        target[name] = value.trim().toUpperCase() + '✂️';
+      }
+    }
+  });
+  personProxy.name = 'Wesley';
+```
+
+- Phone numbers example
+```javascript
+  const phoneHandler = {
+    set(target, name, value) {
+      target[name] = value.match(/[0-9]/g).join('');
+    },
+    get(target, name) {
+      return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    }
+  }
+  const phoneNumbers = new Proxy({}, phoneHandler);
+```
+
+- Proxies are handy for writing libraries
