@@ -15,7 +15,6 @@ global scoped in windows if var wasnt created in a function
 - only use let if rebinding is needed
 - var shouldn't be used in ES6
 
-
 ## Arrow functions
 
 - implicit return
@@ -184,9 +183,6 @@ for (const [i, cut] of cuts.entries()) {
 - Objects: Using Object.keys(myobj) and iterating them
 
 - For Objects is more recommended to use for in. For ES2017 there is a proposal for Object.entries().
-
-
-
 
 
 ## Array .from() & .of()
@@ -543,3 +539,16 @@ people.next(); // returns an object {value: "cbh6", done: false}
 ```
 
 - Proxies are handy for writing libraries
+
+## Objects
+
+- Check if object has a property
+```javascript
+const phones = {
+  home: "123123123",
+  work: "789789789"
+}
+
+console.log("work" in phones); // true
+console.log("personal" in phones); // false
+```
