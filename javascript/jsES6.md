@@ -585,3 +585,68 @@ for(const person of peopleSet) {
 
 
 - If we use a variable to store `.values()` and `.next()` to iterate over them. We can still add items to the original set and the *values* variable is going to have them when calling next.
+
+# WeakSets
+
+- Is just like a set with limitations
+- Can only contain objects
+- We can not loop over it
+- There is no clear method
+- Weaksets sort of clean themselves
+- When one of the objects is no longer on its memory reference, it will be automatically taken out from the WeakSet by its garbage collector.
+
+# Maps
+
+- Sets are to arrays, maps are to objects.
+- They work similar like sets but they have **keys** and **values**.
+  
+**Methods**
+
+- map.get(key)
+- map.has(key)
+- map.delete(key)
+- map.clear()
+
+**Looping over**
+
+- You can loop over in two ways
+- `foreach` -> `map.forEach((value, key) => console.log(value, key))`
+- `for of` -> `for (const item of map) console.log(item)` : The interesting thing about for of is that each `item` is going to be an array containing the key and the value. 
+- With for of you can use array destructuring instead -> `for (const [key, val] of map) console.log(key, val)`
+
+- Maps are handy for metadata dicctionary
+- You can use an object as the key in a map.
+- You can also use a DOM Elements as the key.
+
+- [Example: Button click count metadata](https://github.com/wesbos/es6.io/blob/master/19%20-%20Maps%20and%20WeakMaps/maps-metadata.html)
+
+```html
+<body>
+
+<button>Snakes 🐍</button>
+<button>Cry 😂</button>
+<button>Ice Cream 🍦</button>
+<button>Flamin' 🔥</button>
+<button>Dancer 💃</button>
+
+<script>
+  const clickCounts = new Map();
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(button => {
+    clickCounts.set(button, 0);
+    button.addEventListener('click', function() {
+      const val = clickCounts.get(this);
+      clickCounts.set(this, val + 1);
+      console.log(clickCounts);
+    });
+  });
+</script>
+</body>
+```
+
+# WeakMap
+
+- Same as WeakSet
+- Doesnt have a size
+- Is not enumerable (we can not loop over)
+- If an item is no longer present in the memory reference, it wil be garbage collected
