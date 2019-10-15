@@ -30,7 +30,7 @@ The main difference between this and debouncing is that throttle guarantees the 
 - The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
 - It can receive a second argument -> Map function to call on every element of the array
 - The mapFn function will receive: value of iterated element as first argument and key as second argument
-- Array from can take an object `{length: n}` to determinate its length
+- Array from can take an object `{length: n}` to set its length
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 
