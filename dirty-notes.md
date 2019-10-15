@@ -49,11 +49,11 @@ var arr4 = Array.from({ length: 5 }, () => 1);
 var arr5 = Array.from({ length: 5 }, (_, i) => i + 10);
 ```
 
-# GIT commands
+## GIT commands
 
-> `git stash`
-> `git stash list`
-> `git stash pop` --> Apply and delete last stash
-> `git stash clear` --> Remove all stash entries
-> `git stash drop stash@{index}` --> Remove a single stash entry from the list of stash entries. When no <stash> is given, it removes the latest one. i.e. stash@{0}, otherwise <stash> must be a valid stash log reference of the form stash@{<revision>}.
+- `git stash`
+- `git stash list`
+- `git stash pop` --> Apply and delete last stash
+- `git stash clear` --> Remove all stash entries
+- `git stash drop stash@{index}` --> Remove a single stash entry from the list of stash entries. When no <stash> is given, it removes the latest one. i.e. stash@{0}, otherwise <stash> must be a valid stash log reference of the form stash@{<revision>}.
 
