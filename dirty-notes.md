@@ -64,3 +64,15 @@ In Unix systems the end of a line is represented with a line feed (LF). In windo
 If you are a single developer working on a windows machine, and you don't care that git automatically replaces LFs to CRLFs, you can turn this warning off by typing the following in the git command line
 
 `git config core.autocrlf true`
+
+## Angular
+
+- css conditional class
+
+Angular 2,..,7 provides several ways to add classes conditionally:
+
+1 - `[class.my-class]="step=='step1'"`
+2 - `[ngClass]="{'my-class': step=='step1'}"`
+3 - `[ngClass]="{'my-class': step=='step1', 'my-class2':step=='step2' }"`
+4 - `[ngClass]="{1:'my-class1',2:'my-class2',3:'my-class4'}[step]"`
+5 - `[ngClass]="(step=='step1')?'my-class1':'my-class2'"`
