@@ -87,16 +87,16 @@ Angular 2,..,7 provides several ways to add classes conditionally:
 
 #### shallow
 
-Renderiza un componente. Si este invoca otros componentes en su render(), shallow no los renderiza.
-Testear un componente
+- Renderiza un componente. Si este invoca otros componentes en su render(), shallow no los renderiza.
+- Testear un componente
 
 #### mount
 
-interacciones entre componentes
-full dom render
-lifecycle methods
-require full dom api
-necesitas un headless browser
+- interacciones entre componentes
+- full dom render
+- lifecycle methods
+- require full dom api
+- necesitas un headless browser
 
 ## JS stuff
 
