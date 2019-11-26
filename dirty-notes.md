@@ -101,12 +101,14 @@ Angular 2,..,7 provides several ways to add classes conditionally:
 ## JS stuff
 
 check if a property exists in an object
+```javascript
 let cache = {}
-`if (cache.n)`
-or
-`if (n in cache`)
+if (cache.n)
+// or
+if (n in cache)
+```
 
-## REDUX
+## Redux
 
 ### redux selectors
 reselect library
