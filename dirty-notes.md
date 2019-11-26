@@ -71,11 +71,11 @@ If you are a single developer working on a windows machine, and you don't care t
 
 Angular 2,..,7 provides several ways to add classes conditionally:
 
--1 - `[class.my-class]="step=='step1'"`
--2 - `[ngClass]="{'my-class': step=='step1'}"`
--3 - `[ngClass]="{'my-class': step=='step1', 'my-class2':step=='step2' }"`
--4 - `[ngClass]="{1:'my-class1',2:'my-class2',3:'my-class4'}[step]"`
--5 - `[ngClass]="(step=='step1')?'my-class1':'my-class2'"`
+1. `[class.my-class]="step=='step1'"`
+2. `[ngClass]="{'my-class': step=='step1'}"`
+3. `[ngClass]="{'my-class': step=='step1', 'my-class2':step=='step2' }"`
+4. `[ngClass]="{1:'my-class1',2:'my-class2',3:'my-class4'}[step]"`
+5. `[ngClass]="(step=='step1')?'my-class1':'my-class2'"`
 
 ---
 
