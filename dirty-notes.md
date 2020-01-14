@@ -56,6 +56,7 @@ var arr5 = Array.from({ length: 5 }, (_, i) => i + 10);
 - `git stash pop` --> Apply and delete last stash
 - `git stash clear` --> Remove all stash entries
 - `git stash drop stash@{index}` --> Remove a single stash entry from the list of stash entries. When no <stash> is given, it removes the latest one. i.e. stash@{0}, otherwise <stash> must be a valid stash log reference of the form stash@{<revision>}.
+- `git remote remove origin`
 
 ## GIT auto crlf warning
 
@@ -159,3 +160,63 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - styled-components
 	- generates a unique css selector for every element, so it will never collide
 	- adds an extra layer of complexity
+	
+### React HOC
+
+- https://github.com/ZhangMYihua/higher-order-components-explained
+- Functions that wrapps and extends another component with any particular functionality
+- Definition: A higher-order component in React is a pattern used to share common functionality between components without repeating code. A higher-order component is actually not a component though, it is a function . A HOC function takes a component as an argument and returns a component
+
+### redux thunk
+
+- Allows us to have asynchronous actions
+- Is a middleware that injects (dispatch) and (getState) in the dispatched actions that are functions (not objects)
+- https://www.udemy.com/course/complete-react-developer-zero-to-mastery/learn/lecture/15213926#overview
+- We can then dispatch any other actions inside our async action creator
+- https://platzi.com/blog/como-funciona-redux-thunk/
+- If redux-thunk middleware is enabled, any time you attempt to dispatch a function instead of an object, the middleware will call that function with dispatch method itself as the first argument.
+
+
+
+### React container pattern
+
+- Continers don't render anything. They just pass props down to components
+- react -> compose : when you want to use multiple hoc at the same time
+- `connect(mapStateToProps)(withSpinner(MyComponent)` is the same as `compose(connect(mapStateToProps), withSpinner)(MyComponent)`
+- more readable
+
+
+### React sagas
+
+-Its a function that conditionally runs. The condition that it depends on when it runs is based on whether or not a specific action is coming into the saga middleware.
+- Multiple sagas can be listeting for multiple different actions or the same actions
+- Code that won't run until they hear the action that they are listening for
+- They can do all kinds of logic: trigger other actions which go back into our middleware and continue into our reducers so other sagas can also be listening for actions that come out of sagas, or they can render any kind of additional API logic right. They can go to the back and fetch some data and user that data to dispatch actions to update reducers...
+
+- Pure/Impure functions
+```javascript
+// Pure: No matter how many times you call this fn, it will
+// always return the same output
+const addNumbers = (a,b) => a + b;
+// Impure
+let number = 8;
+const addNumbers = (a,b) => num + a + b; 
+```
+
+- API calls inside of componentDidMount() are impure, it has side effects. They don't always return the same output given the same input
+- Any async activity that happens inside our app that is not related to our component state but rather posibily related to the app as a whole, or some part of the app should be moved into a saga.
+- Gives large more responsability to redux beyond of storing state
+- Handles async impure side effecs
+
+- **Before we continue, I would like to make one quick correction about when Sagas fire in our redux flow. In the previous video I mentioned that sagas fire before reducers, it's actually the other way around! Reducers fire first, then sagas receive the action. From there, sagas can fire off new actions which in turn hit the reducers and other sagas as well!
+
+- function generators: a fn that reasembles async await. Async/await is actually built on top of generators
+```javascript
+function* gen(i) {
+	yield i;
+	yield i + 10;
+	return 25;
+}	
+```
+
+- Concurrently: It doesn't block the entire execution
