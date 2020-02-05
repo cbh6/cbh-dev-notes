@@ -220,3 +220,23 @@ function* gen(i) {
 ```
 
 - Concurrently: It doesn't block the entire execution
+
+## Custom Events with Vanilla JavaScript
+
+
+https://gomakethings.com/custom-events-with-vanilla-javascript/
+https://stackoverflow.com/questions/26817906/element-event-listener-callback-not-working-with-custom-event
+https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles
+
+```
+window.addEventListener('myEvent', () => console.log('aha!'));
+```
+
+
+```
+var element = document.getElementById('my-random-element');
+element.dispatchEvent(new CustomEvent('myEvent', { bubbles: true }));
+```
+
+- Bubbles:true is needed in order to bubble up the event through the DOM
+- This is because we are registering an event listener to the window object and dispatching this event from a child
