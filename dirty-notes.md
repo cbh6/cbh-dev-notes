@@ -224,9 +224,9 @@ function* gen(i) {
 ## Custom Events with Vanilla JavaScript
 
 
-https://gomakethings.com/custom-events-with-vanilla-javascript/
-https://stackoverflow.com/questions/26817906/element-event-listener-callback-not-working-with-custom-event
-https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles
+- https://gomakethings.com/custom-events-with-vanilla-javascript/
+- https://stackoverflow.com/questions/26817906/element-event-listener-callback-not-working-with-custom-event
+- https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles
 
 ```
 window.addEventListener('myEvent', () => console.log('aha!'));
