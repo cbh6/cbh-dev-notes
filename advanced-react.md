@@ -247,4 +247,4 @@ useEffect(() => {
 - Is a native react way of implementing redux. Sometimes is actually very useful to use this when you need something a little more minuscule than a full redux implementation but you need something more complex than just simply using local state.
 - You get all redux functionality except minus asynchronous event handling
 
-## useContext, useMemo, useCallback
+### useContext, useMemo, useCallback
