@@ -99,3 +99,13 @@ element.dispatchEvent(new CustomEvent('myEvent', { bubbles: true }));
 
 - Bubbles:true is needed in order to bubble up the event through the DOM
 - This is because we are registering an event listener to the window object and dispatching this event from a child
+
+
+## JS: check if a property exists in an object
+
+```javascript
+let cache = {}
+if (cache.n)
+// or
+if (n in cache)
+```
