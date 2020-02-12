@@ -165,3 +165,86 @@ useEffect(() => {
 	fetchFunc();
 }, []);
 ```
+
+- useEffect can return a function, and that is the function that useEffect calls when te component unmounts -> componentWillUnmount
+
+```
+useEfect(() => {
+	console.log('123');
+	return () => {
+		console.log('unmount');
+	}
+}, []);
+```
+
+
+### useEffect Cheat Sheet
+A quick recap of what we have learned about useEffect:
+
+
+
+#### ComponentDidMount
+
+```
+//Class
+componentDidMount() {
+    console.log('I just mounted!');
+}
+ 
+//Hooks
+useEffect(() => {
+    console.log('I just mounted!');
+}, [])
+```
+
+#### ComponentWillUnmount
+
+```
+//Class
+componentWillUnmount() {
+    console.log('I am unmounting');
+}
+ 
+//Hooks
+useEffect(() => {
+    return () => console.log('I am unmounting');
+}, [])
+```
+
+#### ComponentWillReceiveProps
+
+```
+//Class
+componentWillReceiveProps(nextProps) {
+    if (nextProps.count !== this.props.count) {
+        console.log('count changed', nextProps.count);
+    }
+}
+ 
+//Hooks
+useEffect(() => {
+    console.log('count changed', props.count);
+}, [props.count])
+```
+
+### Custom Hooks
+
+- Writing reusable, custom hooks.
+- For example we can create a reusable effect for fetching data
+	- Create a file called `use-fetch.effect.js`
+	- Custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/effects/use-fetch.effect.js
+	- Using the custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/components/user/user.component.jsx
+	- If you don't pass the second parameter to the custom usetFetch hook, it will fire every time that post/user components re-render.
+
+
+### useReducer hook
+
+- This useReducer hook is really great in places where you need more complex local state management (than useState())
+- example: https://github.com/ZhangMYihua/useReducer-example/blob/master/src/components/use-reducer-example/use-reducer-example.component.jsx
+- `const [state, dispatch] = useReducer(reducer, INITIAL_STATE)`
+- reducer function contains a switch like redux
+- We need to implement the action creators too.
+- Is a native react way of implementing redux. Sometimes is actually very useful to use this when you need something a little more minuscule than a full redux implementation but you need something more complex than just simply using local state.
+- You get all redux functionality except minus asynchronous event handling
+
+## useContext, useMemo, useCallback
