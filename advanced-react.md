@@ -250,3 +250,11 @@ useEffect(() => {
 - https://www.robinwieruch.de/react-usereducer-vs-usestate
 
 ### useContext, useMemo, useCallback
+
+### React context API
+
+**react context pattern**
+
+We need a component at a very high parent level that has access to local state and then we are gonna pass those fn and those local state values into the context which we can then share  accross the application so that those components can pull in those functions and those values and use them freely.
+
+Examples: https://github.com/cbh6/react-context-lesson
