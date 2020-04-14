@@ -257,4 +257,7 @@ useEffect(() => {
 
 We need a component at a very high parent level that has access to local state and then we are gonna pass those fn and those local state values into the context which we can then share  accross the application so that those components can pull in those functions and those values and use them freely.
 
-Examples: https://github.com/cbh6/react-context-lesson
+Examples:
+
+- (exercise): https://github.com/cbh6/react-context-lesson
+- (solution - fully converted app to context-api): https://github.com/ZhangMYihua/react-context-complete
