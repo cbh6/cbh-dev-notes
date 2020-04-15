@@ -261,3 +261,22 @@ Examples:
 
 - (exercise): https://github.com/cbh6/react-context-lesson
 - (solution - fully converted app to context-api): https://github.com/ZhangMYihua/react-context-complete
+
+**Context VS Redux**
+
+pros
+
+- is way less verbose to write than refux and that's probably the biggest benefit
+- lightweight solution when it comes to local storage management vs something like redux
+- we loose the flexibility of the redux ecosystem (sagas, thunks...)
+
+cons:
+
+- it's very tightly coupling our components with the specific contexts that it needs
+
+
+when:
+- If you know the app is going to be large, your probably want to use redux because
+the ecosystem is fleshed out and ir gives you so much more power 
+and flexibility including all of the asynchronous event handling and the ability
+to reuse your components in a much better way
