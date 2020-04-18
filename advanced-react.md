@@ -20,17 +20,18 @@
 ## Redux
 
 ### redux selectors
+
 reselect library
 
 - mapStateToProps se llama cada vez que se cambie el state incluso si no tiene nada que ver
-esto es porque las props que recibe mapStateToProps (el state) es siempre diferente 
-aunque los valores sean los mismos.
-Cuando actualizamos el estado en el reducer, siempre devolvemos un objeto nuevo...
-Esto provoca que el componente que está conectado a redux se re-renderice cada vez que cambia
-el estado ya que recibe nuevas props (aunque sean las mismas)
+  esto es porque las props que recibe mapStateToProps (el state) es siempre diferente
+  aunque los valores sean los mismos.
+  Cuando actualizamos el estado en el reducer, siempre devolvemos un objeto nuevo...
+  Esto provoca que el componente que está conectado a redux se re-renderice cada vez que cambia
+  el estado ya que recibe nuevas props (aunque sean las mismas)
 
 - Según comentan en el vídeo https://www.udemy.com/course/complete-react-developer-zero-to-mastery/learn/lecture/15162906#questions
-esto se puede solucionar con memoization y la librería reselect
+  esto se puede solucionar con memoization y la librería reselect
 
 - Si el output de un selector no cambia, el componente no debe re-renderizarse => MEMOIZATION (caching the selectors value) => RESELECT => WRITE SELECTORS IN SUCH A WAY IT KNOWS THAT IF THE PROPERTIES THAT IS PULLING FROM THE STATE AND USING ARE THE SAME, IN THE SENSE OF THE VALUE HASN'T CHANGED AND THE OUTPUT OF THE SELECTOR IS NOT DIFFERENT THEN IT WONT ACTUALLY PASS THEM INTO OUR COMPONENT AND OUR COMPONENT WONT RERENDER
 
@@ -42,7 +43,7 @@ Memoization --- caching
 - sessionStorage
 - yarn add redux-persist
 - Let us leverage either local or session storage very easily
-- Creates a copy of the store in the localStorage and when user refreshes it checks if there is something in the localStorage and rehydrates the redux state store with the stored one in the localStorage. 
+- Creates a copy of the store in the localStorage and when user refreshes it checks if there is something in the localStorage and rehydrates the redux state store with the stored one in the localStorage.
 - We can choose which reducers (parts of the global store) want to keep in our localStorage using the 'whitelist' config
 
 ## Data normalization
@@ -51,10 +52,8 @@ Memoization --- caching
 - Allows to access directly to a certain element by its key instead of searching it using .find (which has more computational cost for huge collections)
 - Useful when storing collections where we could need an individual element -> Instead of looping over the collection to find that element, we can retrieve it by its key
 
-
 **Hash tables vs Arrays**
 https://www.kirupa.com/html5/hashtables_vs_arrays.htm
-
 
 ## CSS in JS
 
@@ -65,10 +64,8 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - BEM -> naming -> as you start nesting deeper you start more to the name (more specific...)
 - BEM is a solution based in how css was created
 - We can leverage JS to create the css for us
-- styled-components
-	- generates a unique css selector for every element, so it will never collide
-	- adds an extra layer of complexity
-	
+- styled-components - generates a unique css selector for every element, so it will never collide - adds an extra layer of complexity
+
 ## React HOC
 
 - https://github.com/ZhangMYihua/higher-order-components-explained
@@ -84,8 +81,6 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - https://platzi.com/blog/como-funciona-redux-thunk/
 - If redux-thunk middleware is enabled, any time you attempt to dispatch a function instead of an object, the middleware will call that function with dispatch method itself as the first argument.
 
-
-
 ## React container pattern
 
 - Continers don't render anything. They just pass props down to components
@@ -93,22 +88,23 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - `connect(mapStateToProps)(withSpinner(MyComponent)` is the same as `compose(connect(mapStateToProps), withSpinner)(MyComponent)`
 - more readable
 
-
 ## React sagas
 
 -Its a function that conditionally runs. The condition that it depends on when it runs is based on whether or not a specific action is coming into the saga middleware.
+
 - Multiple sagas can be listeting for multiple different actions or the same actions
 - Code that won't run until they hear the action that they are listening for
 - They can do all kinds of logic: trigger other actions which go back into our middleware and continue into our reducers so other sagas can also be listening for actions that come out of sagas, or they can render any kind of additional API logic right. They can go to the back and fetch some data and user that data to dispatch actions to update reducers...
 
 - Pure/Impure functions
+
 ```javascript
 // Pure: No matter how many times you call this fn, it will
 // always return the same output
-const addNumbers = (a,b) => a + b;
+const addNumbers = (a, b) => a + b;
 // Impure
 let number = 8;
-const addNumbers = (a,b) => num + a + b; 
+const addNumbers = (a, b) => num + a + b;
 ```
 
 - API calls inside of componentDidMount() are impure, it has side effects. They don't always return the same output given the same input
@@ -116,15 +112,16 @@ const addNumbers = (a,b) => num + a + b;
 - Gives large more responsability to redux beyond of storing state
 - Handles async impure side effecs
 
-- **Before we continue, I would like to make one quick correction about when Sagas fire in our redux flow. In the previous video I mentioned that sagas fire before reducers, it's actually the other way around! Reducers fire first, then sagas receive the action. From there, sagas can fire off new actions which in turn hit the reducers and other sagas as well!
+- \*\*Before we continue, I would like to make one quick correction about when Sagas fire in our redux flow. In the previous video I mentioned that sagas fire before reducers, it's actually the other way around! Reducers fire first, then sagas receive the action. From there, sagas can fire off new actions which in turn hit the reducers and other sagas as well!
 
 - function generators: a fn that reasembles async await. Async/await is actually built on top of generators
+
 ```javascript
 function* gen(i) {
-	yield i;
-	yield i + 10;
-	return 25;
-}	
+  yield i;
+  yield i + 10;
+  return 25;
+}
 ```
 
 - Concurrently: It doesn't block the entire execution
@@ -143,14 +140,13 @@ The Effect Hook lets you perform side effects in function components
 
 - This happens for every render, including the first one.
 
-
 ```
 useEffect(() => {
   document.title = `You clicked ${count} times`;
 }, [count]); // Only re-run the effect if count changes
 ```
 
-- useEffect fires only 1 time when the component mounts -> pass an empty array 
+- useEffect fires only 1 time when the component mounts -> pass an empty array
 - componentDidMount with fetch call
 - we cannot set async to the anonymous function because useEffect only wants function. And async is making an async object from our function
 
@@ -177,11 +173,9 @@ useEfect(() => {
 }, []);
 ```
 
-
 ### useEffect Cheat Sheet
+
 A quick recap of what we have learned about useEffect:
-
-
 
 #### ComponentDidMount
 
@@ -190,7 +184,7 @@ A quick recap of what we have learned about useEffect:
 componentDidMount() {
     console.log('I just mounted!');
 }
- 
+
 //Hooks
 useEffect(() => {
     console.log('I just mounted!');
@@ -204,7 +198,7 @@ useEffect(() => {
 componentWillUnmount() {
     console.log('I am unmounting');
 }
- 
+
 //Hooks
 useEffect(() => {
     return () => console.log('I am unmounting');
@@ -220,7 +214,7 @@ componentWillReceiveProps(nextProps) {
         console.log('count changed', nextProps.count);
     }
 }
- 
+
 //Hooks
 useEffect(() => {
     console.log('count changed', props.count);
@@ -230,12 +224,7 @@ useEffect(() => {
 ### Custom Hooks
 
 - Writing reusable, custom hooks.
-- For example we can create a reusable effect for fetching data
-	- Create a file called `use-fetch.effect.js`
-	- Custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/effects/use-fetch.effect.js
-	- Using the custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/components/user/user.component.jsx
-	- If you don't pass the second parameter to the custom usetFetch hook, it will fire every time that post/user components re-render.
-
+- For example we can create a reusable effect for fetching data - Create a file called `use-fetch.effect.js` - Custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/effects/use-fetch.effect.js - Using the custom fetch hook -> https://github.com/ZhangMYihua/custom-hook-example/blob/master/src/components/user/user.component.jsx - If you don't pass the second parameter to the custom usetFetch hook, it will fire every time that post/user components re-render.
 
 ### useReducer hook
 
@@ -251,11 +240,11 @@ useEffect(() => {
 
 ### useContext, useMemo, useCallback
 
-### React context API
+## React context API
 
 **react context pattern**
 
-We need a component at a very high parent level that has access to local state and then we are gonna pass those fn and those local state values into the context which we can then share  accross the application so that those components can pull in those functions and those values and use them freely.
+We need a component at a very high parent level that has access to local state and then we are gonna pass those fn and those local state values into the context which we can then share accross the application so that those components can pull in those functions and those values and use them freely.
 
 Examples:
 
@@ -274,9 +263,23 @@ cons:
 
 - it's very tightly coupling our components with the specific contexts that it needs
 
-
 when:
+
 - If you know the app is going to be large, your probably want to use redux because
-the ecosystem is fleshed out and ir gives you so much more power 
-and flexibility including all of the asynchronous event handling and the ability
-to reuse your components in a much better way
+  the ecosystem is fleshed out and it gives you so much more power
+  and flexibility including all of the asynchronous event handling and the ability
+  to reuse your components in a much better way
+
+## GraphQL
+
+- GraphQL is something for the backend
+- Is actually a server language that wraps around an existing db or server that you can make requests against in a different way from the way that we have been up until this point
+- Query: get some data
+- Mutation: want to modify data
+- The shape looks like the same as a json
+
+### Prisma
+
+- Is a layer between our db and our client application that allows us to make GraphQL requests
+
+### Apollo
