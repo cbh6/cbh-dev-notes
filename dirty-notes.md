@@ -61,6 +61,11 @@ var arr5 = Array.from({ length: 5 }, (_, i) => i + 10);
 **GIT Stash name**
 - use `git stash push -m aNameForYourStash` to save it. Then use `git stash list` to learn the index of the stash that you want to apply. Then use `git stash pop --index 0` to pop the stash and apply it.
 
+**GIT Rebase**
+- `git rebase origin/branch`
+- Fix conflicts
+- `git push --force origin branch` --> this is need because we rewrited history (explained here:https://blog.verslu.is/git/git-rebase/)
+
 ## GIT auto crlf warning
 
 In Unix systems the end of a line is represented with a line feed (LF). In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). when you get code from git that was uploaded from a unix system they will only have an LF.
