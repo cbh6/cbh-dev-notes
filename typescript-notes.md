@@ -8,11 +8,11 @@
 
 # ts-node
 
+- https://www.digitalocean.com/community/tutorials/typescript-running-typescript-ts-node
 - ts-node is an npm package which allows the user to run typescript files directly, without the need for precompilation using tsc. It also provides REPL.
 - Puedes ejecutar TypeScript directamente en Node con el paquete ts-node. Este paquete se recomienda sólo para desarrollo. Para realizar el despliegue final en producción, usa siempre la versión JavaScript de tu proyecto.
 - With TypeScript being a superset of JavaScript, using it means transpiling your *.ts files down to pure JavaScript before the V8 engine can understand them
 -- but sometimes you just want to run your script and get results. This is where ts-node comes in. With ts-node we can skip the fuss and execute our TypScript scripts with ease.
-https://www.digitalocean.com/community/tutorials/typescript-running-typescript-ts-node
 - if we’re not so worried about TypeScript errors, we can pass in the -T or --transpileOnly flag. This flag tells ts-node to simply transpile down to JavaScript and to not worry about any TypeScript errors.
 - While it’s not always adviseable to use this flag, because you lose out on what makes TypeScript pretty awesome, there are scenarios where it makes sense, like when you’re just trying to run somebody else’s script or if you’re confident that your editor + linter is catching everything and you’re being mindful enough to listen.
 - Typescript REPL -> with ts-node you can also try typescript on the terminal
@@ -20,4 +20,4 @@ https://www.digitalocean.com/community/tutorials/typescript-running-typescript-t
 # tipado estático y dinámico
 
 - El tipado estático nos obliga a definir desde el principio el tipo de una variable, ejemplos de lenguajes con tipado estatico son C, C++, Pascal, Java, Objetive-C, C#...
-- El tipado dinamico nos da la
+- El tipado dinamico nos da la facilidad de no definir los tipos al declarar una variable, algunos ejemplos son PHP, JavaScript, Grooby, Phyton, Perl, entre otros
