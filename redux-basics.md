@@ -1,6 +1,6 @@
 # REDUX BASICS
 
-### STORE
+### store
 
 - big object where global state lives
 
@@ -17,21 +17,7 @@ const store = createStore(rootReducer, applyMiddleware(...middlewares));
 export default store;
 ```
 
-### ROOT REDUCER
-
-- imports all our reducers and combine them using the redux function `combineReducers`
-
-```
-import { combineReducers } from 'redux';
-
-import userReducer from './user/user.reducer';
-
-export default combineReducers({
-  user: userReducer
-});
-```
-
-### REDUCER
+### reducer
 
 - a function that receives the state (or initial state for the first time) and an action. It will return a new object with updated state
 - a reducer is a function that always returns the same output having the same input
@@ -57,7 +43,21 @@ const userReducer = (state = INITIAL_STATE, action) => {
 export default userReducer;
 ```
 
-### ACTION
+### rootReducer
+
+- imports all our reducers and combine them using the redux function `combineReducers`
+
+```
+import { combineReducers } from 'redux';
+
+import userReducer from './user/user.reducer';
+
+export default combineReducers({
+  user: userReducer
+});
+```
+
+### action
 
 - object containing the action type and the payload (this is the object that reducers will receive)
 - action creator -> a function that is passed to dispatch on components
@@ -70,7 +70,7 @@ export const setCurrentUser = user => ({
 });
 ```
 
-### MAIN FILE CONFIG
+### main file config
 
 - index.js
 - is the entry point of our application, it needs to wrap our main Application component with the redux provider in order to allow our components to have access to redux context (Store)
@@ -96,7 +96,7 @@ ReactDOM.render(
 );
 ```
 
-### CONNECT AND MAPDISPATCHTOPROPS
+### connect and mapDispatchToProps
 
 - connect -> every component that needs to use redux (get values from the store or dispatch actions) will have to be exported using this HOC
 - mapDispatchToProps -> second argument that is sent to connect. It contains the actions that our component will receive from props
@@ -118,7 +118,7 @@ export default connect(
 )(App);
 ```
 
-### MAPSTATETOPROPS
+### mapStateToProps
 
 - first argument sent to connect. It contains the values from the store that we need
 
