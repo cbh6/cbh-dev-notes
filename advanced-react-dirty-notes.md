@@ -41,3 +41,57 @@
 - npm update - npm doesnt need npm install before if we have changed any dep version
 - yarn cant upgrade if we change any dep version, we need to yarn install.
 - npm audit fix - to fix vulnerabilities
+
+# react-router
+
+- https://reactrouter.com/core/api/Switch
+- `<Switch>`
+- Renders the first child <Route> or <Redirect> that matches the location.
+
+- Every route wrapped component receives 3 parameters
+- **location**: where we are
+- **history**: object with functions like push (to navigate)
+- **match**: info about the matching route url
+
+
+# Object destructuring
+
+https://dmitripavlutin.com/javascript-object-destructuring/
+
+> Often objects can be nested in other objects. In other words, some properties can contain objects. 
+> const { nestedObjectProp: { identifier } } = expression;
+> The above syntax is equivalent to:
+> const identifier = expression.nestedObjectProp.identifier;
+
+example: 
+
+```
+const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne',
+  address: {
+    city: 'Gotham'
+  }
+};
+
+// Object destructuring:
+const { address: { city } } = hero;
+city; // => 'Gotham'
+```
+
+- We can pass all object properties to a component by using destructuring
+`const obj = {a:1, b:2}; <MyComp {...obj} />`
+
+- Any anonymous function calls inside a component do get called again on every re-render. We can avoid this by using memoization `useCallback or useMemo` hooks
+
+# Resources: Importing SVG In React
+
+import { ReactComponent as Logo }
+This is a new special syntax when importing SVG in React. The ReactComponent import name is special and tells Create React App that you want a React component that renders an SVG, rather than its filename. You can read more about it here, but keep in mind that this is a React library special syntax:
+
+https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files
+
+# CSS box-sizing: border-box
+
+- the margin, padding and borders affect to elements size, which means that if an element has any of these values, the total size is affected
+- `box-sizing: border-box` margin, padding and borders does not affect the element size
