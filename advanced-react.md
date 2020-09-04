@@ -283,3 +283,11 @@ when:
 - Is a layer between our db and our client application that allows us to make GraphQL requests
 
 ### Apollo
+
+- Something for the backend. Is actually a server language that wraps around an existing database or server that you can make requests against in a different way from the way that we have been up until this point
+
+- Leverage the library that we're going to use to interact with our graphQl server to handle our local state
+- Solve all of the problems in its own way that redux and context API solve
+- The only difference is that here it leverages this graphQL interface that we're going to see.
+- Apollo integrate our React application os it can work with graphQL
+- When we query for things from our graphQl server, this client will make sure to cache the data that we've fetched
