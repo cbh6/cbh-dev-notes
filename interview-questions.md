@@ -36,5 +36,5 @@ const getPath = function(folder) {
     return path;
 }
 
-getPath(documents); // "/windows/Documents/Images";
+getPath(images); // "/windows/Documents/Images";
 ```
