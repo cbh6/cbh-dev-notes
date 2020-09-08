@@ -1,3 +1,5 @@
+# 1
+
 - We have a Folder class which has name and parent as properties. Parent is also a folder so we can have N nested folders.
 - Imagine we have the following folder structure: windows > Documents > Images
 - Implement a getPath function that can receive a folder instance and return the full path
