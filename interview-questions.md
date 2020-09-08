@@ -25,7 +25,6 @@ const images = new Folder('Images', documents);
 
 const getPath = function(folder) {
     let path = `/${folder.getName()}`;
-    
     let parent = folder.getParent();
     while (parent) {
         path = `/${parent.getName()}${path}`;
