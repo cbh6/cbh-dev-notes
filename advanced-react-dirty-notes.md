@@ -95,3 +95,18 @@ https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files
 
 - the margin, padding and borders affect to elements size, which means that if an element has any of these values, the total size is affected
 - `box-sizing: border-box` margin, padding and borders does not affect the element size
+
+# setState tip
+
+Instead of passing in an object to this.setState we can pass in a function and reliably get the value of the current state of our component. My submit function from above now looks like this:
+
+```
+submit(){
+   this.setState(function(prevState, props){
+      return {showForm: !prevState.showForm}
+   });}
+```
+
+Passing in a function into setState instead of an object will give you a reliable value for your component’s state and props. One thing to note is that the React documentation makes use of arrow functions in their examples (which is also on my list of things to migrate to in my Shopsifter app!) so in my example above I’m using ES5 syntax for my function.
+
+If you know you’re going to use setState to update your component and you know you’re going to need the current state or the current props of your component to calculate the next state, passing in a function as the first parameter of this.setState instead of an object is the recommended solution.
