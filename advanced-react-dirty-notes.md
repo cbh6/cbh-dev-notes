@@ -110,3 +110,34 @@ submit(){
 Passing in a function into setState instead of an object will give you a reliable value for your component’s state and props. One thing to note is that the React documentation makes use of arrow functions in their examples (which is also on my list of things to migrate to in my Shopsifter app!) so in my example above I’m using ES5 syntax for my function.
 
 If you know you’re going to use setState to update your component and you know you’re going to need the current state or the current props of your component to calculate the next state, passing in a function as the first parameter of this.setState instead of an object is the recommended solution.
+
+# lodash.memoize
+
+`yarn add lodash.memoize`
+
+`import memoize from 'lodash.memoize';`
+
+Imagine we have a selector function called `selectCollection` which also uses the `reselect` library to 'memoize' the returned value of the selector. And this function make use of an urlParam to call the selector
+Just wrap our selectCollection function with memoize like so:
+
+```
+    export const selectCollection = memoize((collectionUrlParam) =>
+      createSelector(
+        [selectCollections],
+        (collections) => collections[collectionUrlParam]
+      )
+    );
+```
+
+`Memoize` does the same idea of memoization as reselect does for our selectors, except this time we're memoizing the return of our function which returns our selector:
+
+```
+    (collectionUrlParam) =>
+      createSelector(
+        [selectCollections],
+        (collections) => collections[collectionUrlParam]
+     )
+```
+
+By wrapping this function is memoize, we're saying that whenever this function gets called and receives collectionUrlParam, I want to memoize the return of this function (in this case we return a selector). If this function gets called again with the same collectionUrlParam, don't rerun this function because we'll return the same value as last time, which we've memoized so just return the selector that's been stored.
+
