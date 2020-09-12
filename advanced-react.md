@@ -291,3 +291,77 @@ when:
 - The only difference is that here it leverages this graphQL interface that we're going to see.
 - Apollo integrate our React application os it can work with graphQL
 - When we query for things from our graphQl server, this client will make sure to cache the data that we've fetched
+
+`yarn add apollo-boost react-apollo graphql`
+
+- Apollo is a client of our graphql server
+- on index.js instantiate the client
+	- import { ApolloProvider } from 'react-apollo;
+	- this provider allows the rest of our application to be able to access the state that is stored on Apollo
+	-  import { createHttpLink } from 'apollo-link-http'
+	- let us actually connect our client to our specific endpoint /graphql
+	- import { InMemoryCache } from 'apollo-cache-inmemory'
+	- the thing that Apollo uses to actually cache the data that it fetches
+	- import { ApolloClient } from 'apollo-boost'
+```
+const httpLink = createHttpLink({
+	uri: 'https://crwn-clothing.com'
+});
+const cache = new InMemoryCache();
+const client = new ApolloClient({
+	link: httpLink,
+	cache
+});
+```
+- Wrap our app with `<ApolloProvider client={client}>`
+- we can also import { gql } from 'apollo-boost'
+
+```
+client.query({
+	query: qql`
+		{
+			getCollectionsByTitle(title: "hats") { 
+				id 
+				title 
+			}
+		}
+	`
+}).then(res => console.log);
+```
+ 	
+- The same way we wrapped our container components with the Context Consumer or redux in order to access the data we can create a Container and use  Apollo to pass down de data
+
+```
+import React from 'react';
+import { Query } from 'react-apollo';
+import { gql } from 'apollo-boost';
+
+import CollectionsOverview from '..component';
+import Spinner;
+
+const GET_COLLECTIONS = gql`
+	{
+		collections {
+			id
+			title
+			...
+		}
+	}
+`
+
+const collectionsOverviewContainer = () => (
+	<Query query={GET_COLLECTIONS}>
+	{
+		({ loading, error, data }) => {
+			if (loading) return <Spinner />
+
+			return <CollectionsOverview collections={data.collections} />
+		}
+	}
+	</Query>
+)
+
+export default CollectionsOverviewContainer;
+```
+
+- Before doing this, we had our CollectionsOverviewContainer connected to the redux store in order to get the data
