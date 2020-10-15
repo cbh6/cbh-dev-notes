@@ -20,7 +20,7 @@ Host gitlab.com
   IdentityFile ~/.ssh/id_ed25519_one.pub
 
 # Custom GitLab 
-Host ttivgitlab01.teralco.local/
+Host gitlab-custom.com
   Preferredauthentications publickey
   IdentityFile ~/.ssh/id_ed25519_two.pub
 ```
