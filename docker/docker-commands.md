@@ -13,3 +13,13 @@ for older engines `docker inspect --format '{{ .NetworkSettings.IPAddress }}' co
 
 
 - What does `docker-compose up -d` ? -> starts the containers in detached mode so will not show any output from them in the console and run them in the background
+
+---
+
+- docker volume ls -q | xargs docker volume rm -f 
+- docker network ls -q | xargs docker network rm -f 
+- docker system prune -af
+- docker-compose down --remove-orphans 
+
+- docker volume ls
+- docker volume rm VOLUME_NAME
