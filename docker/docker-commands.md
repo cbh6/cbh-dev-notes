@@ -23,3 +23,11 @@ for older engines `docker inspect --format '{{ .NetworkSettings.IPAddress }}' co
 
 - docker volume ls
 - docker volume rm VOLUME_NAME
+
+---
+
+Connect to docker container bash and execute psql queries
+
+- docker ps (copy container ID)
+- docker exec -it ID bash (enter into the container terminal)
+- psql -h localhost -p 5432 -d user -U password --password
