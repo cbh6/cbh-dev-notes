@@ -28,3 +28,8 @@ If you are a single developer working on a windows machine, and you don't care t
 - `git config --global -l` to see global configuration such as user.email, user.password...
 - `git config -l` to see local repository configuration
 - `git config --global user.email "myemail@hello.com"` to set global configuration. (For local config just the same without --global flag)  
+- `git config user.name "myusername"` sets the local repo user name (it should be the same as your github/gitlab user name)
+
+**If commit messages appear with the system username or another different from github/gitlab account -> You need to configure it locally as described above)**
+
+
