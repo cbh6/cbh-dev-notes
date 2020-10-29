@@ -13,21 +13,34 @@ for older engines `docker inspect --format '{{ .NetworkSettings.IPAddress }}' co
 
 
 - What does `docker-compose up -d` ? -> starts the containers in detached mode so will not show any output from them in the console and run them in the background
+-`docker-compose down -v` If you use docker compose, you can add -v to the down command, to remove the volumes
 
 ---
 
-- docker volume ls -q | xargs docker volume rm -f 
-- docker network ls -q | xargs docker network rm -f 
-- docker system prune -af
-- docker-compose down --remove-orphans 
+- `docker volume ls -q | xargs docker volume rm -f`
+- `docker network ls -q | xargs docker network rm -f`
+- `docker system prune -af`
+- `docker-compose down --remove-orphans`
 
-- docker volume ls
-- docker volume rm VOLUME_NAME
+- `docker stop $(docker ps -a -q)` -> stops all running containers
+- `sudo systemctl restart docker.socket docker.service` -> reset docker service
+
+Delete volume
+
+- `docker volume ls`
+- `docker volume rm VOLUME_NAME`
+
+Sometimes we can't delete a volume. As long as volumes are associated with a container(either running or not), they cannot be removed.
+
+- `docker container prune` before removing volumes must be enough
 
 ---
 
-Connect to docker container bash and execute psql queries
+PostgreSQL Docker: Connect to docker container bash and execute psql queries
 
-- docker ps (copy container ID)
-- docker exec -it ID bash (enter into the container terminal)
-- psql -h localhost -p 5432 -d user -U password --password
+- `docker ps` (copy container ID)
+- `docker exec -it ID bash` (enter into the container terminal)
+- `psql -h localhost -p 5432 -d user -U password --password`
+
+---
+
