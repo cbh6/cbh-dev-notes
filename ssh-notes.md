@@ -2,6 +2,7 @@
 
 - `ssh-add -l` to see ssh-agent added keys
 - create ssh key `ssh-keygen -t ed25519 -C "<comment>"` The -C flag, with a quoted comment such as an email address, is an optional way to label your SSH keys.
+- we can also create rsa keys instead of ed25519 `ssh-keygen -t rsa -b 2048 -C "email@example.com"`
 - copy the SSH key you created to your GitLab account `xclip -sel clip < ~/.ssh/key_name.pub`
 - If you used a non-default file path for your GitLab SSH key pair,
 configure your SSH client to point to your GitLab private SSH key.
