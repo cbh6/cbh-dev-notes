@@ -365,3 +365,20 @@ export default CollectionsOverviewContainer;
 ```
 
 - Before doing this, we had our CollectionsOverviewContainer connected to the redux store in order to get the data
+
+---
+
+- You write like asynchronous code
+- It almostjust feels like we're treating our db as something that's part of our front
+- It doesn't feel asmuch like we're using promises that much anymore. That's hidden away by Apollo
+- You dont' have to spend too much time thinking about what promises you need to resolve, or doing async await
+- It pretty much all gets extrapolated away for us
+
+GraphQL vs redux
+- You can also leverage apollo to manage local front data
+- Data that doesn't need to be on the backend
+- Like for example, cart data from our ecommerce
+- We can leverage GraphQL and apollo to replace the existing redux implementation
+- You can use redux with graphql, the problem with doing so is that you end up running two different kinds of front end state management
+- GrapqhQL client cache can be used as a global state management like redux does
+- Is way verbose
