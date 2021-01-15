@@ -44,3 +44,6 @@ PostgreSQL Docker: Connect to docker container bash and execute psql queries
 
 ---
 
+> If you use docker compose, you can add -v to the down command, to remove the volumes
+
+`docker-compose down -v`
