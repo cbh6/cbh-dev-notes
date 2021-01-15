@@ -6,6 +6,13 @@
 * [permissions: chmod](#chmod)
 * [services](#services)
 
+- `sudo lsof -t -i:PORT` -> Check if there is something running on that port
+- `sudo kill ID` -> Kill process
+- `sudo service postgresql status/stop/start` -> manage service
+- `df -h` -> display the amount of available disk space for file systems on which the invoking user has appropriate read access
+
+- `sudo openvpn --config config_file.ovpn` -> run openvpn using config file
+
 ## Utils
 
 ```shell
