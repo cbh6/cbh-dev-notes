@@ -1,17 +1,5 @@
 # Terminal usefull commands
 
-* [check & kill service from port](#check-and-kill-service-from-port)
-* [update VSCode from ubuntu shell](#update-vscode-from-ubuntu-shell)
-* [compile program from source](#compile-a-program-from-source)
-* [permissions: chmod](#chmod)
-* [services](#services)
-
-- `sudo lsof -t -i:PORT` -> Check if there is something running on that port
-- `sudo kill ID` -> Kill process
-- `sudo service postgresql status/stop/start` -> manage service
-- `df -h` -> display the amount of available disk space for file systems on which the invoking user has appropriate read access
-
-- `sudo openvpn --config config_file.ovpn` -> run openvpn using config file
 
 ## Utils
 
@@ -141,3 +129,11 @@ and run from the UI or from a terminal with
 ```
 sudo bum
 ```
+
+### More
+
+- `sudo lsof -t -i:PORT` -> Check if there is something running on that port
+- `sudo kill ID` -> Kill process
+- `sudo service postgresql status/stop/start` -> manage service
+- `df -h` -> display the amount of available disk space for file systems on which the invoking user has appropriate read access
+- `sudo openvpn --config config_file.ovpn` -> run openvpn using config file
