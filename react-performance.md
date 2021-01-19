@@ -39,7 +39,7 @@ El prop fallback acepta cualquier elemento de React que quieras renderizar mient
 - React.memo uses shallow comparison
 - If you have components that don't receive props, there is no need to memoize them.
 - On the initial mount, a memoized component takes a little longer. Optimizations always come with a cost
-- <Person> component initial mount -> 1.3ms
+- `<Person>` component initial mount -> 1.3ms
 - React.memo(Person) memoized component initial mount -> 1.5ms 
 - Use the Profiler to check components render times
 - PureComponent is the same but for class components
