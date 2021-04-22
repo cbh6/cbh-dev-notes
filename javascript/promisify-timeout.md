@@ -32,4 +32,5 @@ const later = (delay, value) =>
 ```
 
 setTimeout 3rd param -> Additional parameters to pass to the function
+
 more info -> https://stackoverflow.com/questions/22707475/how-to-make-a-promise-from-settimeout
