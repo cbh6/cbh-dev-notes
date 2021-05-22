@@ -1,4 +1,4 @@
-# REDUX BASICS
+# Redux Basics
 
 ### store
 
