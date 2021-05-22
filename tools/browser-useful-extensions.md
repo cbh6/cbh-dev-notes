@@ -24,10 +24,3 @@ or
 [Link to extension](https://www.wappalyzer.com/)
 
 Identify technology on websites
-
-## GitHub Hovercard
-
-[Link to extension](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk)
-
-GitHub Hovercard provides neat hovercards for GitHub.
-It brings you instant access to user/repo/issue/commit information from anywhere on GitHub.

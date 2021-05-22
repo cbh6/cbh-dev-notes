@@ -12,7 +12,6 @@ plugin -> provide a set of rules that oyu can individually apply depending on yo
 https://stackoverflow.com/questions/53189200/whats-the-difference-between-plugins-and-extends-in-eslint
 
 
-
 # En mi caso 
 
 package.json

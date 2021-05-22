@@ -1,6 +1,6 @@
 # Advanced react course notes
 
-## Testing
+## 1. Testing
 
 ### Enzyme
 
@@ -17,7 +17,7 @@
 - require full dom api
 - necesitas un headless browser
 
-## Redux
+## 2. Redux
 
 ### redux selectors
 
@@ -46,7 +46,7 @@ Memoization --- caching
 - Creates a copy of the store in the localStorage and when user refreshes it checks if there is something in the localStorage and rehydrates the redux state store with the stored one in the localStorage.
 - We can choose which reducers (parts of the global store) want to keep in our localStorage using the 'whitelist' config
 
-## Data normalization
+## 3. Data normalization
 
 - Storing list of elements inside of an object instead of an array
 - Allows to access directly to a certain element by its key instead of searching it using .find (which has more computational cost for huge collections)
@@ -55,7 +55,7 @@ Memoization --- caching
 **Hash tables vs Arrays**
 https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 
-## CSS in JS
+## 4. CSS in JS
 
 - css all share a global namespace
 - if two components uses the same className it will collide
@@ -66,13 +66,13 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - We can leverage JS to create the css for us
 - styled-components - generates a unique css selector for every element, so it will never collide - adds an extra layer of complexity
 
-## React HOC
+## 5. React HOC
 
 - https://github.com/ZhangMYihua/higher-order-components-explained
 - Functions that wrapps and extends another component with any particular functionality
 - Definition: A higher-order component in React is a pattern used to share common functionality between components without repeating code. A higher-order component is actually not a component though, it is a function . A HOC function takes a component as an argument and returns a component
 
-## redux-thunk
+## 6. Asynchronous Redux: redux-thunk
 
 - Allows us to have asynchronous actions
 - Is a middleware that injects (dispatch) and (getState) in the dispatched actions that are functions (not objects)
@@ -81,14 +81,14 @@ https://www.kirupa.com/html5/hashtables_vs_arrays.htm
 - https://platzi.com/blog/como-funciona-redux-thunk/
 - If redux-thunk middleware is enabled, any time you attempt to dispatch a function instead of an object, the middleware will call that function with dispatch method itself as the first argument.
 
-## React container pattern
+## 7. React container pattern
 
 - Continers don't render anything. They just pass props down to components
 - react -> compose : when you want to use multiple hoc at the same time
 - `connect(mapStateToProps)(withSpinner(MyComponent)` is the same as `compose(connect(mapStateToProps), withSpinner)(MyComponent)`
 - more readable
 
-## React sagas
+## 8. Asynchronous Redux II: redux-saga
 
 -Its a function that conditionally runs. The condition that it depends on when it runs is based on whether or not a specific action is coming into the saga middleware.
 
@@ -128,7 +128,7 @@ function* gen(i) {
 
 **... more notes to be added when the course section is finished**
 
-## React Hooks
+## 9. React Hooks
 
 - If you want to learn more about why the React team decided to add Hooks to the library, you can find the motivation behind their decision right from their mouth https://reactjs.org/docs/hooks-intro.html#motivation
 
@@ -240,7 +240,7 @@ useEffect(() => {
 
 ### useContext, useMemo, useCallback
 
-## React context API
+## 10. React context API
 
 **react context pattern**
 
@@ -270,7 +270,7 @@ when:
   and flexibility including all of the asynchronous event handling and the ability
   to reuse your components in a much better way
 
-## GraphQL
+## 11. GraphQL
 
 - GraphQL is something for the backend
 - Is actually a server language that wraps around an existing db or server that you can make requests against in a different way from the way that we have been up until this point
@@ -382,3 +382,213 @@ GraphQL vs redux
 - You can use redux with graphql, the problem with doing so is that you end up running two different kinds of front end state management
 - GrapqhQL client cache can be used as a global state management like redux does
 - Is way verbose
+
+## 12. SPA
+
+- In the past we asked to the server for a new html/js/css everytime we navigated through the web
+- SPA give us a massive JS (react) css and a tiny HTML
+- When the user navigates or interacts with the web, react re-renders different parts of the web using js. And we only ask for JSON data to server (APIs) (using ajax calls)
+- These server can be third party servers such as google firebase, or our own servers
+
+## 13. JSX VS JS
+
+- .jsx and .js is the same
+- .jsx will be transformed into .js by webpack and babel
+- using .jsx for react components is a personal preference
+- the editor will recognize this kind of files and use a different icon
+- this is useful to organize our code and our app structure
+- the naming convention is also important asd.component.jsx f.ex
+
+
+- react synthetic events
+- asically, React wraps the browser native event into an instance of the React SyntheticEvent and passes it in React event handlers. ... SyntheticEvent has the same interface as a native event which means that you can use methods like preventDefault() and stopPropagation()
+
+
+- this.state context
+- on class components we can make use of this.state on render and lifecycle methods thanks to our class component is extending React.Component, which is who allow us to access the global this context
+- If we want to access the class context from a function, it has to be an arrow function
+- arrow function set this when the function is declared/defined, the context of the function is the app component (on the course example)
+- when the arrow function come into existence to JS it binds any references to this inside of it to the context in which it was defined which is the app component
+- A good rule of thumb is this: Use arrow functions on any class methods you define and aren't part of React (i.e. render(), componentDidMount()). 
+
+## 14. YARN
+
+- `yarn list package` - see versions
+- `yarn upgrade` - upgrade versions. If package version was defined on package.json using `^` it will try to take the latest non-breaking version from the one defined
+- for ex `react: "^16.8.6"`, at least 16.8.6 or higher but not breaking
+- yarn lock only updates when you run `yarn install`
+- if we have a yarn.lock and we update any package.json version, we need to run yarn install to upgrade
+- we cannot run yarn upgrade here
+
+## 15. NPM
+
+- npm list
+- npm update - npm doesnt need npm install before if we have changed any dep version
+- yarn cant upgrade if we change any dep version, we need to yarn install.
+- npm audit fix - to fix vulnerabilities
+
+## 16. react-router
+
+- https://reactrouter.com/core/api/Switch
+- `<Switch>`
+- Renders the first child <Route> or <Redirect> that matches the location.
+
+- Every route wrapped component receives 3 parameters
+- **location**: where we are
+- **history**: object with functions like push (to navigate)
+- **match**: info about the matching route url
+
+
+## 17. Object destructuring
+
+https://dmitripavlutin.com/javascript-object-destructuring/
+
+> Often objects can be nested in other objects. In other words, some properties can contain objects. 
+> const { nestedObjectProp: { identifier } } = expression;
+> The above syntax is equivalent to:
+> const identifier = expression.nestedObjectProp.identifier;
+
+example: 
+
+```
+const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne',
+  address: {
+    city: 'Gotham'
+  }
+};
+
+// Object destructuring:
+const { address: { city } } = hero;
+city; // => 'Gotham'
+```
+
+- We can pass all object properties to a component by using destructuring
+`const obj = {a:1, b:2}; <MyComp {...obj} />`
+
+- Any anonymous function calls inside a component do get called again on every re-render. We can avoid this by using memoization `useCallback or useMemo` hooks
+
+## 18. Resources: Importing SVG In React
+
+import { ReactComponent as Logo }
+This is a new special syntax when importing SVG in React. The ReactComponent import name is special and tells Create React App that you want a React component that renders an SVG, rather than its filename. You can read more about it here, but keep in mind that this is a React library special syntax:
+
+https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files
+
+## 19. CSS box-sizing: border-box
+
+- the margin, padding and borders affect to elements size, which means that if an element has any of these values, the total size is affected
+- `box-sizing: border-box` margin, padding and borders does not affect the element size
+
+## 20. setState tip
+
+Instead of passing in an object to this.setState we can pass in a function and reliably get the value of the current state of our component. My submit function from above now looks like this:
+
+```
+submit(){
+   this.setState(function(prevState, props){
+      return {showForm: !prevState.showForm}
+   });}
+```
+
+Passing in a function into setState instead of an object will give you a reliable value for your component’s state and props. One thing to note is that the React documentation makes use of arrow functions in their examples (which is also on my list of things to migrate to in my Shopsifter app!) so in my example above I’m using ES5 syntax for my function.
+
+If you know you’re going to use setState to update your component and you know you’re going to need the current state or the current props of your component to calculate the next state, passing in a function as the first parameter of this.setState instead of an object is the recommended solution.
+
+## 21. lodash.memoize
+
+`yarn add lodash.memoize`
+
+`import memoize from 'lodash.memoize';`
+
+Imagine we have a selector function called `selectCollection` which also uses the `reselect` library to 'memoize' the returned value of the selector. And this function make use of an urlParam to call the selector
+Just wrap our selectCollection function with memoize like so:
+
+```
+    export const selectCollection = memoize((collectionUrlParam) =>
+      createSelector(
+        [selectCollections],
+        (collections) => collections[collectionUrlParam]
+      )
+    );
+```
+
+`Memoize` does the same idea of memoization as reselect does for our selectors, except this time we're memoizing the return of our function which returns our selector:
+
+```
+    (collectionUrlParam) =>
+      createSelector(
+        [selectCollections],
+        (collections) => collections[collectionUrlParam]
+     )
+```
+
+By wrapping this function is memoize, we're saying that whenever this function gets called and receives collectionUrlParam, I want to memoize the return of this function (in this case we return a selector). If this function gets called again with the same collectionUrlParam, don't rerun this function because we'll return the same value as last time, which we've memoized so just return the selector that's been stored.
+
+> React.memo
+
+## 22. React performance
+
+- Performance optimizations ALWAYS come with a cost but do NOT always come with a benefit
+- You must consider the tradeoffs when making optimizations
+- You only want to make performance optimization improvements when you hit a problem
+- Specifically the cost for useCallback and useMemo are that you make the code more complex for your co-workers, you could make a mistake in the dependencies array, and you're potentially making performance worse by invoking the built-in hooks and preventing dependencies and memoized values from being garbage collected. Those are all fine costs to incur if you get the performance benefits necessary, but it's best to measure first.
+- React performance cheatsheet https://houssein.me/progressive-react
+
+### Code splitting CRA
+
+- https://es.reactjs.org/docs/code-splitting.html
+- https://es.reactjs.org/docs/concurrent-mode-suspense.html
+
+- page level components -> routes
+- dynamic import with lazy
+- wrap route with suspense
+
+### React.lazy and Suspense
+- La función React.lazy te deja renderizar un import dinámico como un componente regular.
+- El componente lazy debería entonces ser renderizado adentro de un componente Suspense, lo que nos permite mostrar algún contenido predeterminado (como un indicador de carga) mientras estamos esperando a que el componente lazy cargue.
+El prop fallback acepta cualquier elemento de React que quieras renderizar mientras esperas que el Component cargue
+- División de código basada en rutas
+- Suspense permite que tus componentes “esperen” por algo antes de que se puedan renderizar.
+
+### Error Boundaries
+- https://reactjs.org/docs/error-boundaries.html
+- Necesitamos además, el uso de Error Boundaries para mostrar algún tipo de componente en caso de que mientras Suspense espera la carga de un componente importado dinámicamente, la conexión falle o haya algún tipo de problema.
+- Error boundary será componente que capturará cualquier tipo de error y mostrará un mensaje.
+- Podemos envolver <Suspense> y <Route> con <ErrorBoundary>, en ese caso, ante cualquier problema podemos renderizar un componente que muestre al usuario que ha habido algún problema.
+- https://www.kapwing.com/404-illustrations?ref=producthunt
+
+### React.memo and PureComponent
+
+- https://reactjs.org/docs/react-api.html#reactmemo
+- https://reactjs.org/docs/react-api.html#reactpurecomponent
+- https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+- A functional component will always re-render whenever the parent re-renders
+- By using React.memo we can memoize a functional component so that the component will not re-render if the props doesn't change. Is the same as using `shouldComponentUpdate` to avoid unnecessary re-renders.
+- React.memo uses shallow comparison
+- If you have components that don't receive props, there is no need to memoize them.
+- On the initial mount, a memoized component takes a little longer. Optimizations always come with a cost
+- `<Person>` component initial mount -> 1.3ms
+- React.memo(Person) memoized component initial mount -> 1.5ms 
+- Use the Profiler to check components render times
+- PureComponent is the same but for class components
+- Take care when passing inline object as props to memoized components. This way, our component will re-render because inlined object props will be instantiated on every parent re-render. Remember that React.memo uses shallow comparison
+- The same happens with passing inline functions and arrays as props
+
+### useCallback and useMemo
+
+- https://reactjs.org/docs/hooks-reference.html#usecallback
+- Memoize functions so that we don't call them and re-render them unnecessarily if we don't have to
+
+- Whe want to use useCallback when we simply want a memoized function and we use useMemo when we want a memoized value. And we only want to memoize value when the function itself is generally going to be very computationally expensive
+
+- https://kentcdodds.com/blog/usememo-and-usecallback
+
+### Gzipping and compression
+
+- https://www.npmjs.com/package/compression
+
+### Profiler
+
+- https://reactjs.org/docs/profiler.html#usage
