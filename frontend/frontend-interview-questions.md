@@ -51,11 +51,53 @@ It has different values depending on where it is used:
 - In an event, this refers to the element that received the event.
 - Methods like call(), and apply() can refer this to any object.
 
+## How does JS work? (Explain Call stack/ js interpreter/ event loop, etc)
+
+### JS Interpreter / Engines
+
+https://dzone.com/articles/how-javascript-engine-works
+
+- JavaScript engines are a program that helps in converting your code of JavaScript into a lower level code or machine code. ECMAScript Standards is being followed by the JavaScript engines. The job of these standards is to give a definition, how JavaScript engines should work. It also tells what all features it should have.
+- The work of the JavaScript engine was taking JavaScript source code. Then perform the compilation to binary instructions (machine code) that are easily understandable by CPU.
+- A JavaScript engine which is limited consists of a baseline compiler whose work is to do the compilation of the code in the form of intermediate representation (IR), in other words, it is called byte code and then gives the byte code to the interpreter.
+- Further, the interpreter takes this byte code, and then make the conversion into machine code. This machine code will further run this code on the hardware of the machine.
+
+https://ivanrobles.pro/javascript-compilado-o-interpretado/
+
+https://blog.makeitreal.camp/lenguajes-compilados-e-interpretados/
+
+https://yosoy.dev/diferencia-entre-lenguajes-compilados-e-interpretados/
 
 
+### Call Stack
+
+https://www.javascripttutorial.net/javascript-call-stack/
+
+- JavaScript engine uses a call stack to manage execution contexts: the Global Execution Context and Function Execution Contexts.
+- The call stack works based on the LIFO principle i.e., last-in-first-out.
+- When you execute a script, the JavaScript engine creates a Global Execution Context and pushes it on top of the call stack.
+- Whenever a function is called, the JavaScript engine creates a Function Execution Context for the function, pushes it on top of the Call Stack, and starts executing the function.
+- If a function calls another function, the JavaScript engine creates a new Function Execution Context for the function that is being called and pushes it on top of the call stack.
+- When the current function completes, the JavaScript engine pops it off the call stack and resumes the execution where it left off in the last code listing.
+- The script will stop when the call stack is empty.
+
+https://www.javascripttutorial.net/javascript-execution-context/
 
 
-- How does JS work? (Explain Call stack/ js interpreter/ event loop, etc)
+### Event loop
+
+https://www.javascripttutorial.net/javascript-event-loop/
+
+- JavaScript is a single-threaded programming language. In other words, it can do only one thing at a time.
+- JavaScript engine executes a script from the top and works its way down creating execution contexts and pushing and popping functions onto and off the call stack.
+- If you have a function that takes a long time to execute, then you cannot do anything on the web browser during the function’s execution. The webpage just hangs.
+- A function that takes a long time to execute is known as a blocking function. Technically, the blocking functions block all the interactions with the webpage such as mouse click.
+- Some examples of blocking functions are the functions that download files from a remote server or functions that call an API from an external server.
+- The event loop is a constantly running process that monitors both the callback queue and the call stack.
+- If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. If the callback queue is empty, nothing will happen:
+
+
+---
 - (If not explaind) What it's the even loop?
 - (If not explaind) What is JavaScript Hoisting?
 - What is a Promise?
