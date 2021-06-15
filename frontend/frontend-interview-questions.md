@@ -102,11 +102,11 @@ The explanation is here https://twitter.com/dan_abramov/status/11468794903474708
 
 https://medium.com/dataseries/how-to-fix-the-react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-8ac8e368857c
 
-Race conditions:
+> We can’t pass an async function into the useEffect as its first argument because it may lead to race conditions.
+
+**Race conditions:**
 
 https://dev.to/jmhungdev/is-there-race-condition-in-javascript-yes-and-no-4m4p#:~:text=A%20race%20condition%20is%20an,sequence%20to%20be%20done%20correctly.
-
-> We can’t pass an async function into the useEffect as its first argument because it may lead to race conditions.
 
 > A race condition is an undesirable situation that occurs when a device or system attempts to perform two or more operations at the same time, but because of the nature of the device or system, the operations must be done in the proper sequence to be done correctly
 
