@@ -136,6 +136,8 @@ function* gen(i) {
 
 https://reactjs.org/docs/hooks-effect.html
 
+https://dmitripavlutin.com/react-useeffect-explanation/
+
 The Effect Hook lets you perform side effects in function components
 
 - This happens for every render, including the first one.
