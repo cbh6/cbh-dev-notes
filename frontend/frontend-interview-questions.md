@@ -96,6 +96,19 @@ https://www.javascripttutorial.net/javascript-event-loop/
 - The event loop is a constantly running process that monitors both the callback queue and the call stack.
 - If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. If the callback queue is empty, nothing will happen:
 
+## Why I can't pass an async function to useEffect
+
+The explanation is here https://twitter.com/dan_abramov/status/1146879490347470848. You need to be able return a cleanup function synchronously so #react can call it without having to wait for your async work to finish.
+
+https://medium.com/dataseries/how-to-fix-the-react-hook-warnings-for-async-function-in-useeffect-useeffect-function-must-8ac8e368857c
+
+Race conditions:
+
+https://dev.to/jmhungdev/is-there-race-condition-in-javascript-yes-and-no-4m4p#:~:text=A%20race%20condition%20is%20an,sequence%20to%20be%20done%20correctly.
+
+> We can’t pass an async function into the useEffect as its first argument because it may lead to race conditions.
+
+> A race condition is an undesirable situation that occurs when a device or system attempts to perform two or more operations at the same time, but because of the nature of the device or system, the operations must be done in the proper sequence to be done correctly
 
 ---
 - (If not explaind) What it's the even loop?
