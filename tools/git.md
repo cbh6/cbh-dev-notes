@@ -3,6 +3,7 @@
 ## Commands
 
 - `git reset HEAD~1 --hard` -> resets HEAD pointer
+- `git reset --soft HEAD~1` -> reset a not-pushed commit without deleting modified files
 - `GIT FETCH` -> before doing checkout to sync changes
 - `git remote prune` and `git fetch --prune` do the same thing: delete the refs to branches that don't exist on the remote
 - `git commit -a --amend -m "New commit message"` -> Add files and edit message to previous commit. `-a` adds all unstaged files
