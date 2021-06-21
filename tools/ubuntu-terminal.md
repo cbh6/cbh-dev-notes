@@ -1,4 +1,4 @@
-# Terminal usefull commands
+# Terminal useful commands
 
 
 ## Utils
@@ -137,3 +137,12 @@ sudo bum
 - `sudo service postgresql status/stop/start` -> manage service
 - `df -h` -> display the amount of available disk space for file systems on which the invoking user has appropriate read access
 - `sudo openvpn --config config_file.ovpn` -> run openvpn using config file
+
+
+- `rm -r` -> delete dir and its content
+- `rm` -> delete file
+- `ps ux` ->  list all your own running processes
+- `kill -9 PIDnumber` -> kill any process you want
+- `lsof` -> know which files keep a process opened
+- `sudo lsof /var/log/clamav/freshclam.log` -> process that has this file opened
+- `env` -> Environment vars list
