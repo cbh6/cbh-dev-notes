@@ -130,7 +130,7 @@ and run from the UI or from a terminal with
 sudo bum
 ```
 
-### More
+## More
 
 - `sudo lsof -t -i:PORT` -> Check if there is something running on that port
 - `sudo kill ID` -> Kill process
