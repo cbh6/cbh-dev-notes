@@ -24,6 +24,19 @@
 - Fix conflicts
 - `git push --force origin branch` --> this is need because we rewrited history (explained here:https://blog.verslu.is/git/git-rebase/)
 
+## Change branch base
+
+https://stackoverflow.com/questions/10853935/change-branch-base
+
+Assuming newBase is the branch you want to move your commits onto, oldBase is the old basis for your branch, you can use `--onto` for that:
+
+`git rebase --onto newBase oldBase feature/branch`
+
+Given your case:
+`git checkout PRO # Just to be clear which branch to be on`
+`git rebase --onto master demo PRO`
+Basically, you take all the commits from after demo up to and including PRO, and rebase them onto the master commit.
+
 ## Adding an existing project to GitHub using the command line
 
 [Guide](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
